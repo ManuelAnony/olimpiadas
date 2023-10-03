@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    background-color: #ffbfbfec;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.header {
+
+
+
+
+    display: -webkit-flex;
+}
+
+/*Desplegable*/
+#menuDesplegable {
+ 
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  color: #007B3E;
+  padding-top: 10px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+
+/*panel IZ*/
+.PanelIZ {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+
+    padding: 0px;
+
+}
+
+.OLIM {
+    align-items: center;
+}
+
+.OLIM h1 {
+
+    /*background-image: url('https://files.123freevectors.com/wp-content/original/206073-neon-green-scattered-numbers-background-illustration.jpg');
+    opacity: 0.7; */
+    text-align: center;
+    font-size: 40px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    color: black;
+
+}
+
+.OLIM h2 {
+    border: 2px solid #555555;
+    background-color: #007B3E;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5;
+
+
+    align-items: center;
+}
+
+.OLIM h3 {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    color: #007B3E;
+    padding-top: 10px;
+    text-transform: uppercase;
+
+}
+
+.OLIM h4 {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.OLIM-img {
+    width: 50%;
+}
+
+.OLIM-img img {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 400px;
+}
+
+.MATE h1 {
+    text-align: left;
+    color: white;
+}
+
+
+
+  #chartContainer {
+
+    width: 320px;
+    height: 300px;
+    margin: 0 auto;
+    
+}
+/*------*/
+/*panel De*/
+.PanelDE {
+    background-color: aliceblue;
+
+
+}
+
+/*panel Cen*/
+.mainCEN {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+
+}
+.Titulo {
+    background-color:gray;
+}
+
+.informacion {
+    margin-top: 40px;
+    padding: 100xp 0px;
+    display: flex;
+    justify-content: space-between;
+padding-right: 20px;
+
+}
+
+.informacion h4 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 18px;
+
+}
+
+#barChart {
+    width: 25px;
+    height: 25px;
+    
+}
+
+#densityChart {
+    width: 25px;
+    height: 25px;
+}
+
+.Titulo {
+    text-align: center;
+    padding-top: 20px;
+
+
+}
+
+.Titulo h2 {
+
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+
+}
+
+
+
+
+/*------*/.menu {
+}

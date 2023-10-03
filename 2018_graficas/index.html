@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Resultados 2018</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <nav class="PanelIZ">
+
+            <div class="OLIM" style="
+			
+			
+			transform: translate(3%, 27%);">
+                <h1>Olimpiadas<br>Matematicas<br>2018</h1>
+                
+
+                <h2><strong>Institución</strong><br>educativa #:</h2>
+                
+				<center>
+				<select id="menuDesplegable" onchange="mostrarMensaje()">
+				  <option value="titulo">- - - -</option>
+				  <option value="IE - 1">IE - 1</option>
+				  <option value="IE - 2">IE - 2</option>
+				  <option value="IE - 3">IE - 3</option>
+				  <option value="IE - 4">IE - 4</option>
+				  <option value="IE - 5">IE - 5</option>
+				  <option value="IE - 6">IE - 6</option>
+				  <option value="IE - 7">IE - 7</option>
+				  <option value="IE - 8">IE - 8</option>
+				  <option value="IE - 9">IE - 9</option>
+				  <option value="IE - 10">IE - 10</option>
+				  <option value="IE - 11">IE - 11</option>
+				  <option value="IE - 12">IE - 12</option>
+				  <option value="IE - 13">IE - 13</option>
+				  <option value="IE - 14">IE - 14</option>
+				  <option value="IE - 15">IE - 15</option>
+				  <option value="IE - 16">IE - 16</option>
+				  <option value="IE - 17">IE - 17</option>
+				  <option value="IE - 18">IE - 18</option>
+				  <option value="IE - 19">IE - 19</option>
+				  <option value="IE - 20">IE - 20</option>
+				  <option value="IE - 21">IE - 21</option>
+				  <option value="IE - 22">IE - 22</option>
+				  <option value="IE - 23">IE - 23</option>
+				  
+				</select>
+				</center>
+
+				
+              
+            </div>
+
+        </nav>
+
+
+
+
+        <main class="mainCEN">
+            <div class="Titulo">
+                <h2>Consolidado de preguntas</h2>
+                <h3>Año:</h3>
+            </div>
+            <div class="informacion">
+                <h4>Numero de estudiantes que participaron:</h4>
+
+                <h4>Porcentaje de acierto por pregunta:</h4>
+
+                <h4>Posición de la Institución:</h4>
+
+
+            </div>
+
+
+
+
+            <canvas id="barChart" ></canvas>
+            <canvas id="densityChart" width="250" height="150"></canvas>
+			
+			
+			<center>
+			<table>
+				<tr>
+					<td><div class="InfoGrafBA">
+                    <h4>% Preguntas Avanzadas</h3>
+                        <div class="chart-container">
+                            <canvas id="chart"></canvas>
+                            <div class="chart-data">
+                                <ul id="data-list"></ul>
+                            </div>
+                        </div>
+					 
+                </div></td>
+					
+					<td><div class="InfoGrafAV">
+                   <h4>% Preguntas Intermedias</h3>
+				    <div class="chart-container">
+                            <canvas id="chartB"></canvas>
+                            <div class="chart-data">
+                              <ul id="data-list"></ul>
+                            </div>
+                          </div>                    
+                </div></td>
+				</tr>
+				<tr>
+					
+					<td><div class="InfoGrafAV">
+                   <h4>% Preguntas Intermedias</h3>
+				    <div class="chart-container">
+                            <canvas id="chartB"></canvas>
+                            <div class="chart-data">
+                              <ul id="data-list"></ul>
+                            </div>
+                          </div>                    
+                </div></td>
+
+				</tr>
+			</table>
+			</center>
+			
+                
+        </main>
+        <aside class="PanelDE">
+            <h1>afasdas</h1>
+        </aside>
+
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

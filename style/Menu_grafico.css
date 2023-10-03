@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    background-color: #ffbfbfec;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+
+
+
+
+    display: -webkit-flex;
+}
+/*panel IZ*/
+.PanelIZ {
+    display: flex;
+    background-color: aliceblue;
+    
+    padding: 0px;
+
+}
+
+.OLIM h1 {
+    text-align: center;
+}
+
+.OLIM-img {
+    width: 50%;
+}
+
+.OLIM-img img {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 400px;
+}
+
+.MATE h1 {
+    text-align: left;
+    color: blue
+}
+/*------*/
+/*panel De*/
+.PanelDE {
+    background-color: aliceblue;
+
+
+}
+/*panel Cen*/
+.mainCEN {
+    background-color: rgb(15, 138, 246);
+    width: 100%;
+    height: 100%;
+}
+/*------*/
+.Titulo {}

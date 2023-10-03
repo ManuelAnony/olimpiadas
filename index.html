@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpiadas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- animate styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style/style_index.css">
+    <link rel="stylesheet" href="style/style_botton.css">
+    <!-- Estas son librerias importadas para los diferentes estilos que se pueden llegar a dar en nuestro esqueleto-->
+</head>
+
+<body>
+<div class="container">
+
+
+    <div class="sidebar">
+      <a href="pdf/DBA_Matematicas2016.pdf" download>
+        <img src="images/Sin título-1.png" alt="Logo" style="height: 45px; width:45px ;">
+        </a>
+        <br>
+      <a href="pdf/EstandaresCurriculares2006.pdf" download>
+         <img src="images/fondo _Sin título.png" alt="Logo" style="height: 45px; width:35px;">
+        </a>
+        <br>
+      <a href="pdf/LineamientosCurriculares1998.pdf" download>
+         <img src="images/Sin tGítulo-1.png" alt="Logo" style="height: 45px; width:45px ;">
+         </a>
+         <br>
+      <a href="pdf/LeyGeneralEducacion1994.pdf" download>
+        <img src="images/43389_SIN.png" alt="Logo" style="height: 45px; width:45px  ;">
+     </a>
+    </div>
+
+
+
+    <div class="content">
+      <!-- Aquí va el contenido principal de tu página -->
+    </div>
+  </div>
+    <header>
+        <div class="menu container">
+            <!--<img class="logo-1" src="Logos UDEC - copia/escudos/ESCUDO-COLOR.png" alt="">-->
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="#fondo">Resultados</a></li>
+                        <li><a href="#info-img">Informate más</a></li>
+                        <li><a href="#horario">5 Pensamientos</a></li>
+                    </ul>
+                </div>
+                <img class="logo-2" src="Logos UDEC - copia/escudos/ESCUDO-VERDE-H.png" alt="">
+                <div class="menu-2">
+                    <ul>
+                        <!--<li><a href="fondo">Resultados</a></li>-->
+                    </ul>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/FacultadIngenieriaUCundinamarca/">
+                            <div class="social">
+                                <img src="images/s1co.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="https://x.com/UCundinamarca?t=QfXnMpPHXU1-GM8rHbjJjw&s=09">
+                            <div class="social">
+                                <img src="images/s2co.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/udecubate23?igshid=MzRlODBiNWFlZA==">
+                            <div class="social">
+                                <img src="images/s3co.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <div class="swiper mySwiper-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Olimpiadas matemáticas</h1>
+                                <p>Conoce sobre las olimpiadas matemáticas que organiza la universidad de Cundinamarca.
+                                </p>
+                                <div class="botones">
+                                    <!--<a href="#" class="btn-1 ">Mas Informacion</a>-->
+									<button class="btn-1" onclick="scrollToSection('info-img')">Mas Informacion</button>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="Logos UDEC - copia/logomatematicas.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Resultados obtenidos</h1>
+                                <p>Revisa la información que han obtenido los diferentes colegios en los últimos años.
+                                </p>
+                                <div class="botones">
+                                    <!--<a href="#" class="btn-1 " onclick="scrollToSection('fondo')" >Mas Informacion</a>-->
+									<button class="btn-1" onclick="scrollToSection('fondo')">Mas Informacion</button>
+                                    
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="Logos UDEC - copia/investigacion.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>5 pensamientos</h1>
+                                <p>¿Quieres saber cuales son los 5 pensamientos que desarrollan nuestras olimpiadas
+                                    matemáticas?
+                                </p>
+                                <div class="botones">
+                                    <!--<a href="#" class="btn-1" onclick="scrollToSection('horario')" >Mas Informacion</a>-->
+									 <button class="btn-1" onclick="scrollToSection('horario')">Mas Informacion</button>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="Logos UDEC - copia/pensamientos.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </header>
+	
+	
+    <div id ="fondo" class="fondo">
+        <main class="products">
+
+            <h1>Resultados en el periodo 2017 - 2019</h1>
+            <p>Conoce los resultados, las buenas practicas y el buen uso de los 5 pensamientos por cada uno de los
+                planteles
+                educativos en la provincia del Valle de Ubaté.</p>
+            <div class="tabs container">
+
+                <input type="radio" name="tabs" id="tab1" checked="checked" value="1">
+                <label for="tab1">Año 2017</label>
+                <div class="tab">
+					<div class="product">
+                         <div class="product-img">
+                             <h4>Consulta los resultados de tu Institución Educativa #</h4>
+
+                             <a href="prueba_graficos/index.html" class="btn-2">Resultados</a>
+                         </div>
+                         
+
+                      </div>
+                   
+                </div>
+                <input type="radio" name="tabs" id="tab2" checked="checked" value="2">
+                <label for="tab2">Año 2018</label>
+                <div class="tab">
+                    <div class="product">
+                         <div class="product-img">
+                             <h4>Consulta los resultados de tu Institución Educativa #</h4>
+
+                             <a href="2018_graficas/index.html" class="btn-2">Resultados</a>
+                         </div>
+                         
+
+                      </div>
+                </div>
+                <input type="radio" name="tabs" id="tab3" checked="checked" value="3">
+                <label for="tab3">Año 2019</label>
+                <div class="tab">
+                    <center>
+					<div class="product">
+                         <div class="product-img">
+                             <h4>Consulta los resultados de tu Institución Educativa #</h4>
+
+                             <a href="2019_graficas/index.html" class="btn-2">Resultados</a>
+                         </div>
+                         
+
+                      </div>
+                      </center>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        // slide principal
+        var swiper1 = new Swiper(".mySwiper-1", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        // slide de productos
+        var swiper2 = new Swiper(".mySwiper-2", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+	
+	
+    <section class="info container">
+        <div id="info-img" class="info-img">
+            <img src="Logos colegios/Mineducación_Colombia.svg" alt="">
+        </div>
+        <div class="info-txt">
+            <h2>Infórmate mas:</h2>
+            <p>Conoce los diferentes entes nacionales y gubernamentales que promueven el desarrollo de la educación por
+                medio de estas estrategias.
+            </p>
+            <a href="#" class="btn-2">Mas Informacion</a>
+
+        </div>
+
+    </section>
+
+	
+	
+    <section class="horario">
+        <div id="horario" class="horario-info container">
+            <br>
+            <br>
+        <h2>LOS 5 PENSAMIENTOS <br>MATEMATICOS</h2>
+        <div id="horario" class="container-card">
+            <br>
+            <br>
+    <button class="accordion btn-2" onclick="toggleContent(1)">NUMÉRICO</button>
+    <div class="panel" id="content1" style="color: white;">
+      <p>
+        La comprensión del uso y de los significados de los números y de la numeración; la comprensión del sentido y significado de las operaciones y de las relaciones entre números, y el desarrollo de diferentes técnicas de cálculo y estimación.
+      </p>
+    </div>
+    <br>
+    <button class="accordion btn-2" onclick="toggleContent(2)">ESPACIAL</button>
+    <div class="panel" id="content2" style="color: white;">
+      <p>
+        El conjunto de los procesos cognitivos mediante los cuales se construyen y se manipulan las representaciones mentales de los objetos del espacio, las relaciones entre ellos, sus transformaciones, y sus diversas traducciones o representaciones materiales.
+      </p>
+    </div>
+    <br>
+    <button class="accordion btn-2" onclick="toggleContent(3)">METRICO O MEDIDA</button>
+    <div class="panel" id="content3" style="color: white;">
+      <p>
+        La comprensión general que tiene una persona sobre las magnitudes y las cantidades, su medición y el uso flexible de los sistemas métricos o de medidas en diferentes situaciones.
+      </p>
+    </div>
+    <br>
+    <button class="accordion btn-2" onclick="toggleContent(4)">PROBABILISTICO</button>
+    <div class="panel" id="content4" style="color: white;">
+      <p class="white-text">
+        La toma de decisiones en situaciones de incertidumbre, de azar, de riesgo o de ambigüedad por falta de información confiable, en las que no es posible predecir con seguridad lo que va a pasar. El pensamiento aleatorio se apoya directamente en conceptos y procedimientos de la teoría de probabilidades y de la estadística inferencial, e indirectamente en la estadística descriptiva y en la combinatoria.
+      </p>
+    </div>
+    <br>
+    <button class="accordion btn-2" onclick="toggleContent(5)">VARIACIONAL</button>
+    <div class="panel" id="content5" style="color: white;">
+      <p class="white-text">
+        El reconocimiento, la percepción, la identificación y la caracterización de la variación y el cambio en diferentes contextos, así como con su descripción, modelación y representación en distintos sistemas o registros simbólicos, ya sean verbales, icónicos, gráficos o algebraicos.
+      </p>
+    </div>
+          </div>
+        </div>
+    </section>
+	
+	
+	
+  <!--<section class="map container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31781.568716829628!2d-73.82599077016381!3d5.310026384788316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e40385d565df873%3A0x3aa4271185e1a35f!2sUbat%C3%A9%2C%20Villa%20de%20San%20Diego%20de%20Ubat%C3%A9%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1684795256187!5m2!1ses!2sco"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>-->
+	
+	
+    <footer class="footer container">
+        
+		<img class="logo-2" src="Logos UDEC - copia/escudos/ESCUDO-BLANCO-H.png" alt="">
+
+        <div class="links">
+            <h4>Estandares basicos</h4>
+            <ul>
+                <li><a href="#">lorem</a></li>
+
+            </ul>
+        </div>
+        <div class="links">
+            <h4>lineamientos curriculares</h4>
+            <ul>
+                <li><a href="#">lorem</a></li>
+
+
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Derecho basico de aprendizaje</h4>
+            <ul>
+                <li><a href="#">lorem</a></li>
+
+
+            </ul>
+        </div>
+        <div class="links">
+            <h4></h4>
+            <div class="socials">
+                <a href="https://www.facebook.com/FacultadIngenieriaUCundinamarca/">
+                    <div class="social">
+                        <img src="images/s1.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://x.com/UCundinamarca?t=QfXnMpPHXU1-GM8rHbjJjw&s=09">
+                    <div class="social">
+                        <img src="images/s2.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://instagram.com/udecubate23?igshid=MzRlODBiNWFlZA==">
+                    <div class="social">
+                        <img src="images/s3.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Estas son librerias importadas para los diferentes estilos que se pueden llegar a dar en nuestro esqueleto-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Inicializar el swiper del header
+            new Swiper(".mySwiper-1", {
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            // Inicializar los swipers de los productos
+            new Swiper(".mySwiper-2", {
+                loop: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        });
+    </script>
+	<script>
+    // Función para desplazarse a una sección específica
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Oculta todos los paneles de contenido al cargar la página
+document.addEventListener("DOMContentLoaded", function() {
+  var panels = document.querySelectorAll(".panel");
+  panels.forEach(function(panel) {
+    panel.style.display = "none";
+  });
+});
+
+function toggleContent(id) {
+  var content = document.getElementById("content" + id);
+  if (content.style.display === "none" || content.style.display === "") {
+    // Oculta todos los paneles antes de mostrar el seleccionado
+    var panels = document.querySelectorAll(".panel");
+    panels.forEach(function(panel) {
+      panel.style.display = "none";
+    });
+    
+    content.style.display = "block"; // Muestra el panel seleccionado
+  } else {
+    content.style.display = "none"; // Oculta el panel si ya está abierto
+  }
+}
+
+
+  </script>
+</body>
+
+</html>
