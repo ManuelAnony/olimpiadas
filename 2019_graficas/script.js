@@ -1,4 +1,4 @@
-// 2017 Preguntas 
+// 2019 Preguntas 
 
 // Generar colores aleatorios en formato rgba
 function generarColorAleatorio() {
@@ -15,24 +15,24 @@ const data = {
         'IE-11', 'IE-12', 'IE-13', 'IE-14', 'IE-15', 'IE-16',
         'IE-17', 'IE-18', 'IE-19', 'IE-20', 'IE-21', 'IE-22', 'IE-23',' ','TOTAL'],
     datasets: [{
-        label: '2017 - Basico',
-        data: [55, 52, 47, 54, 51, 50, 50, 33, 30, 33, 37, 28, 25, 27, 57, 57, 0, 0, 0, 0, 0, 0, 0,0, 43],
+        label: '2019 - Basico',
+        data: [71, 63, 0, 75, 72, 71, 77, 0, 55, 0, 60, 49, 54, 53, 0, 63, 55, 68, 50, 37, 65, 0, 57,0, 61],
         backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
-    	borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
-    	borderWidth: 1
+        borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
+        borderWidth: 1
     },{
-        label: '2017 - Intermedio',
-        data: [26, 57, 45, 41, 44, 47, 46, 40, 35, 30, 37, 0, 35, 30, 44, 45, 0, 0, 0, 0, 0, 0, 0,0, 38],
+        label: '2019 - Intermedio',
+        data: [52, 39, 0, 51, 51, 51, 44, 0, 48, 0, 43, 40, 38, 45, 0, 46, 40, 53, 0, 0, 54, 0, 58,0, 47],
         backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
-    	borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
-    	borderWidth: 1
+        borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
+        borderWidth: 1
     },
 {
-        label: '2017 - Avanzado',
-        data: [31, 31, 0, 50, 41, 31, 27, 38, 0, 0, 38, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0,0,8],
+        label: '2019 - Avanzado',
+        data: [41, 0, 0, 49, 57, 50, 45, 0, 40, 0, 60, 0, 0, 0, 0, 45, 0, 42, 0, 0, 42, 0, 47,0, 47],
         backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
-    	borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
-    	borderWidth: 1
+        borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
+        borderWidth: 1
     },]
 };
 
@@ -100,7 +100,36 @@ const chartB = new Chart(ctxB, {
             text: 'Gráfico de barras'
         },
         subtitle: {
-            text: 'Datos de ventas por mes'
+            text: 'Datos de preguntas que se respondieron'
+        },
+        labels: {
+            fontColor: 'black',
+            fontSize: 1,
+            boxWidth: 1
+        },
+        responsive: false,
+        legend: {
+            position: 'left',
+        }
+    }
+});
+
+const ctxC = document.getElementById('chartC').getContext('2d');
+const chartC = new Chart(ctxC, {
+    type: 'pie',
+    data: {
+        labels: [],
+        datasets: [{
+            data: [],
+            backgroundColor: [],
+        }]
+    },
+    options: {
+        title: {
+            text: 'Gráfico de barras'
+        },
+        subtitle: {
+            text: 'Datos de preguntas que se respondieron'
         },
         labels: {
             fontColor: 'black',
@@ -120,60 +149,78 @@ function mostrarMensaje() {
 
     switch (institucionSeleccionada) {
         case 'IE - 1':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [1, 1, 2];
+            chart.data.labels = ['P1', 'P2' ,'P3'];
+            chart.data.datasets[0].data = [2, 4, 4];
             chart.data.datasets[0].backgroundColor = ['#005954', '#01655c', '#027664'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [3, 5, 6, 9, 4, 4];
+            chartB.data.labels = ['P1','P2','P3'];
+            chartB.data.datasets[0].data = [4, 4, 8 ];
             chartB.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15','P16','P17', 'P18', 'P19', 'P20'];
+            chartC.data.datasets[0].data = [9,  10, 9,  11, 10, 4,  11, 11, 10, 7,  10, 3,  10, 10, 0, 5, 3, 11,  9,   8];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
             agregarDatosIE1(); // Llamada a la función para agregar datos específicos de IE-1
             break;
 
         case 'IE - 2':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 1, 1];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#005954', '#01655c', '#027664'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [5, 1, 4, 2, 4, 0];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+
+            chartC.data.labels = [];
+            chartC.data.datasets[0].data = [];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
             agregarDatosIE2(); // Llamada a la función para agregar datos específicos de IE-2
             break;
-		case 'IE - 3':
+        case 'IE - 3':
             chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.datasets[0].data = [3, 4, 3];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [2, 1, 4, 2, 3, 1];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [2, 4, 5];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [6, 7, 7, 6, 4, 3, 6, 6, 7, 3, 4, 4, 6, 7, 1, 5, 4, 4, 1, 4];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
             agregarDatosIE3(); // Llamada a la función para agregar datos específicos de IE-3
             break;
 
         case 'IE - 4':
             chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [1, 1, 1];
+            chart.data.datasets[0].data = [7, 5, 7];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];//Avanzados
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [1, 3, 5, 2, 3, 2];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [8, 8, 10];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];//Basicas
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [11, 11, 10, 10, 8, 5, 12, 11, 11, 5, 8, 4, 12, 12, 2, 2, 6, 11, 8, 6];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
             agregarDatosIE4(); // Llamada a la función para agregar datos específicos de IE-4
             break;
 
         case 'IE - 5':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [1, 2, 0];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [3, 2, 6, 5, 2, 5];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+
+            chartC.data.labels = [];
+            chartC.data.datasets[0].data = [];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
             agregarDatosIE5(); // Llamada a la función para agregar datos específicos de IE-5
             break;
@@ -187,66 +234,90 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [4, 2, 7, 9, 8, 2];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [9, 12, 10, 10, 9, 4, 11, 11, 9, 6, 10, 8, 11, 10, 6, 4, 4, 11, 7, 6];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE6(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 7':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [1, 1, 2];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [4, 4, 6, 2, 5, 1];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+
+            chartC.data.labels = [];
+            chartC.data.datasets[0].data = [];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
             agregarDatosIE7(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 8':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [1, 1, 1];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [1, 2, 1, 1, 1, 0];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+
+            chartC.data.labels = [];
+            chartC.data.datasets[0].data = [];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
             agregarDatosIE8(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 9':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [2, 2, 1, 2, 0, 1];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [2, 5, 2, 2, 4, 0, 4, 3, 3, 2, 0, 1, 5, 5, 0, 0, 4, 5, 1, 2];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE9(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 10':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [1, 1, 1, 2, 0, 0];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+
+            chartC.data.labels = [];
+            chartC.data.datasets[0].data = [];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
             agregarDatosIE10(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 11':
             chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 1];
+            chart.data.datasets[0].data = [1, 0, 1];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [2, 0, 3, 2, 1, 1];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [0, 2, 2];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [5, 4, 5, 2, 4, 2, 4, 4, 4, 1, 3, 0, 5, 5, 0, 1, 0, 4, 2, 2];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE11(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -255,46 +326,62 @@ function mostrarMensaje() {
             chart.data.datasets[0].data = [0, 0, 0];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [1, 0, 2, 2, 0, 0];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [1, 1, 1];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [4, 3, 3, 1, 4, 0, 4, 4, 2, 2, 4, 0, 5, 5, 1, 0, 1, 4, 2, 2];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE12(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 13':
             chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.datasets[0].data = [2, 1, 3];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [1, 1, 2, 1, 1, 2];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [0, 3, 3];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [6, 5, 6, 6, 4, 1, 6, 5, 6, 0, 2, 0, 5, 6, 0, 1, 1, 6, 1, 2];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE13(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 14':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [2, 2, 0, 0, 4, 1];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+
+            chartC.data.labels = [];
+            chartC.data.datasets[0].data = [];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
             agregarDatosIE14(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 15':
             chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [1, 0, 1];
+            chart.data.datasets[0].data = [1, 1, 1];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [0, 3, 2, 4, 2, 2];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [2, 3, 4];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [8, 10, 6, 10, 8, 1, 9, 6, 6, 4, 4, 5, 7, 8, 1, 1, 1, 8, 5, 5];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE15(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -303,93 +390,125 @@ function mostrarMensaje() {
             chart.data.datasets[0].data = [1, 1, 2];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6'];
+            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
             chartB.data.datasets[0].data = [0, 0, 2, 1, 1, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [5, 6, 5, 4, 6, 1, 6, 4, 5, 3, 4, 2, 4, 5, 1, 2, 3, 5, 4, 2];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE16(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 17':
             chart.data.labels = ['P1', 'P2', 'A3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.datasets[0].data = [2, 1, 2];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [0, 0, 0, 0, 0, 0];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [3, 4, 4];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [8, 9, 7, 3, 10, 3, 7, 5, 8, 3, 7, 2, 8, 10, 0, 3, 2, 8, 6, 7];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE17(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 18':
             chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.datasets[0].data = [3, 2, 2];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [0, 0, 0, 0, 0, 0];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [3, 3, 3];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [10, 10, 8, 7, 8, 3, 8, 5, 9, 2, 5, 0, 9, 10, 0, 2, 3, 8, 4, 5];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE18(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 19':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [0, 0, 0, 0, 0, 0];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [0, 2, 1, 0, 1, 0, 0, 0, 2, 1, 0, 0, 0, 0, 1, 0, 2, 0, 1, 0];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE19(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 20':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [0, 0, 0, 0, 0, 10];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [8, 8, 7, 5, 7, 2, 6, 6, 9, 0, 1, 1, 7, 10, 2, 2, 3, 6, 3, 9];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE20(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 21':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [0, 0, 0, 0, 0, 10];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
+            chartB.data.datasets[0].data = [0, 1, 3];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [7, 6, 9, 5, 6, 2, 8, 8, 7, 4, 2, 2, 9, 9, 0, 3, 2, 9, 4, 3];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE21(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 22':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [0, 0, 0];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [0, 0, 0, 0, 0, 0];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
+            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.datasets[0].data = [8, 10, 6, 10, 8, 1, 9, 6, 6, 4, 4, 5, 7, 8, 1, 1, 1, 8, 5, 5];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            
             agregarDatosIE22(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
         case 'IE - 23':
-            chart.data.labels = ['P1', 'P2', 'P3'];
-            chart.data.datasets[0].data = [10, 10, 14];
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-            chartB.data.datasets[0].data = [0, 0, 0, 0, 0, 0];
+            chartB.data.labels = [];
+            chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            
+            chartC.data.labels = [];
+            chartC.data.datasets[0].data = [];
+            chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
             agregarDatosIE23(); // Llamada a la función para agregar datos específicos de IE-2
             break;
@@ -407,844 +526,353 @@ function mostrarMensaje() {
 
     chart.update();
     chartB.update();
+    chartC.update();
 }
 
 // Función para agregar datos específicos de IE-1
 function agregarDatosIE1() {
-    agregarDato('P4', 2, '#03886c');
-    agregarDato('P5', 1, '#049974');
-    agregarDato('P6', 1, '#05ab7c');
-    agregarDato('P7', 1, '#06bd84');
-    agregarDato('P8', 1, '#07d58c');
+    agregarDato('P4', 3, '#03886c');
+    agregarDato('P5', 3, '#049974');
+    agregarDato('P6', 2, '#05ab7c');
+    agregarDato('P7', 3, '#06bd84');
+    agregarDato('P8', 3, '#07d58c');
     agregarDato('P9', 2, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P10', 2, '#09f79c');
     agregarDato('P11', 2, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P12', 1, '#0bb7ac');
+    agregarDato('P13', 1, '#0cafb4');
     agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 1, '#0f90bc');
     
 
-    agregarDatoB('P1', 3, '#003400');
-    agregarDatoB('P2', 5, '#004300');
-    agregarDatoB('P3', 6, '#005100');
-    agregarDatoB('P4', 9, '#006100');
-    agregarDatoB('P5', 4, '#007000');
-    agregarDatoB('P6', 4, '#008000');
-    agregarDatoB('P7', 7, '#009000');
-    agregarDatoB('P8', 5, '#00a000');
-    agregarDatoB('P9', 9, '#00b000');
-    agregarDatoB('P10', 9, '#00c100');
-    agregarDatoB('P11', 9, '#00d100');
-    agregarDatoB('P12', 10, '#00e100');
-    agregarDatoB('P13', 7, '#00f200');
-    agregarDatoB('P14', 8, '#00ff2b');
-    agregarDatoB('P15', 5, '#00ff12');
-    agregarDatoB('P16', 11, '#00ff45');
-    agregarDatoB('P17', 8, '#00ff5f');
-    agregarDatoB('P18', 3, '#00ff79');
-    agregarDatoB('P19', 5, '#00ff93');
-    agregarDatoB('P20', 6, '#98ff96');
+    agregarDatoB('P4', 6, '#ffff00');
+    agregarDatoB('P5', 2, '#ff00ff');
+    agregarDatoB('P6', 4, '#00ffff');
+    agregarDatoB('P7', 5, '#ff0033');
+    agregarDatoB('P8', 6, '#33ff00');
+    agregarDatoB('P9', 3, '#0033ff');
+    agregarDatoB('P10', 2, '#3300ff');
+    agregarDatoB('P11', 2, '#ff3300');
+    agregarDatoB('P12', 3, '#00ff33');
+    agregarDatoB('P13', 3, '#3300ff');
+    agregarDatoB('P14', 3, '#ff0033');
+    agregarDatoB('P15', 2, '#00ff33');
+
 }
 
 // Función para agregar datos específicos de IE-2
 function agregarDatosIE2() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 1, '#05ab7c');
-    agregarDato('P7', 1, '#06bd84');
-    agregarDato('P8', 1, '#07d58c');
-    agregarDato('P9', 2, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 1, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 2, '#0f90bc');
+    
+}
 
-    agregarDatoB('P1', 5, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
+function agregarDatosIE3() {
+    agregarDato('P4', 4, '#03886c');
+    agregarDato('P5', 4, '#049974');
+    agregarDato('P6', 1, '#05ab7c');
+    agregarDato('P7', 3, '#06bd84');
+    agregarDato('P8', 3, '#07d58c');
+    agregarDato('P9', 2, '#08e994');
+    agregarDato('P10', 2, '#09f79c');
+    agregarDato('P11', 1, '#0affa4');
+    agregarDato('P12', 1, '#0bb7ac');
+    agregarDato('P13', 4, '#0cafb4');
+    agregarDato('P14', 0, '#0d8cbc');
+
+
+
+    agregarDatoB('P1', 2, '#ff0000');
+    agregarDatoB('P2', 4, '#00ff00');
+    agregarDatoB('P3', 5, '#0000ff');
+    agregarDatoB('P4', 4, '#ffff00');
     agregarDatoB('P5', 4, '#ff00ff');
-    agregarDatoB('P6', 0, '#00ffff');
+    agregarDatoB('P6', 3, '#00ffff');
     agregarDatoB('P7', 3, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 3, '#0033ff');
-    agregarDatoB('P10', 4, '#3300ff');
+    agregarDatoB('P8', 5, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 2, '#3300ff');
     agregarDatoB('P11', 3, '#ff3300');
     agregarDatoB('P12', 4, '#00ff33');
     agregarDatoB('P13', 2, '#3300ff');
     agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 6, '#ff3300');
-    agregarDatoB('P17', 2, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 3, '#ff3300');
-}
+    agregarDatoB('P15', 3, '#00ff33');
 
-function agregarDatosIE3() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
-
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
 }
 function agregarDatosIE4() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
+    agregarDato('P4', 3, '#03886c');
+    agregarDato('P5', 7, '#049974');
+    agregarDato('P6', 7, '#05ab7c');
+    agregarDato('P7', 5, '#06bd84');
+    agregarDato('P8', 3, '#07d58c');
+    agregarDato('P9', 4, '#08e994');
+    agregarDato('P10', 6, '#09f79c');
+    agregarDato('P11', 1, '#0affa4');
+    agregarDato('P12', 3, '#0bb7ac');
+    agregarDato('P13', 5, '#0cafb4');
+    agregarDato('P14', 2, '#0d8cbc');
+   
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
+    agregarDatoB('P1', 8, '#ff0000');
+    agregarDatoB('P2', 8, '#00ff00');
+    agregarDatoB('P3', 10, '#0000ff');
+    agregarDatoB('P4', 7, '#ffff00');
+    agregarDatoB('P5', 8, '#ff00ff');
+    agregarDatoB('P6', 3, '#00ffff');
+    agregarDatoB('P7', 6, '#ff0033');
+    agregarDatoB('P8', 7, '#33ff00');
+    agregarDatoB('P9', 6, '#0033ff');
+    agregarDatoB('P10', 4, '#3300ff');
+    agregarDatoB('P11', 8, '#ff3300');
+    agregarDatoB('P12', 8, '#00ff33');
+    agregarDatoB('P13', 7, '#3300ff');
+    agregarDatoB('P14', 5, '#ff0033');
     agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
+    
 }
-function agregarDatosIE5() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
 
 function agregarDatosIE6() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P4', 1, '#03886c');
+    agregarDato('P5', 6, '#049974');
+    agregarDato('P6', 4, '#05ab7c');
+    agregarDato('P7', 4, '#06bd84');
+    agregarDato('P8', 3, '#07d58c');
+    agregarDato('P9', 5, '#08e994');
+    agregarDato('P10', 1, '#09f79c');
+    agregarDato('P11', 2, '#0affa4');
+    agregarDato('P12', 2, '#0bb7ac');
+    agregarDato('P13', 5, '#0cafb4');
     agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
+
+    agregarDatoB('P1', 6, '#ff0000');
+    agregarDatoB('P2', 6, '#00ff00');
+    agregarDatoB('P3', 8, '#0000ff');
+    agregarDatoB('P4', 7, '#ffff00');
     agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
+    agregarDatoB('P6', 2, '#00ffff');
+    agregarDatoB('P7', 10, '#ff0033');
+    agregarDatoB('P8', 7, '#33ff00');
+    agregarDatoB('P9', 4, '#0033ff');
+    agregarDatoB('P10', 8, '#3300ff');
+    agregarDatoB('P11', 3, '#ff3300');
+    agregarDatoB('P12', 8, '#00ff33');
+    agregarDatoB('P13', 5, '#3300ff');
+    agregarDatoB('P14', 6, '#ff0033');
+    agregarDatoB('P15', 2, '#00ff33');
+
 }
 
-function agregarDatosIE7() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
-
-function agregarDatosIE8() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
-
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
-function agregarDatosIE9() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
-
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
-function agregarDatosIE10() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
-
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
 function agregarDatosIE11() {
     agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
+    agregarDato('P5', 1, '#049974');
     agregarDato('P6', 0, '#05ab7c');
     agregarDato('P7', 0, '#06bd84');
     agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P9', 1, '#08e994');
+    agregarDato('P10', 1, '#09f79c');
     agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P12', 1, '#0bb7ac');
+    agregarDato('P13', 1, '#0cafb4');
     agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
+    agregarDatoB('P1', 0, '#ff0000');
+    agregarDatoB('P2', 2, '#00ff00');
+    agregarDatoB('P3', 2, '#0000ff');
+    agregarDatoB('P4', 1, '#ffff00');
+    agregarDatoB('P5', 1, '#ff00ff');
     agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
+    agregarDatoB('P7', 1, '#ff0033');
+    agregarDatoB('P8', 0, '#33ff00');
+    agregarDatoB('P9', 0, '#0033ff');
+    agregarDatoB('P10', 0, '#3300ff');
+    agregarDatoB('P11', 0, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
     agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
+    agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 0, '#00ff33');
+
 }
 function agregarDatosIE12() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
+    
 
-    agregarDatoB('P1', 2, '#ff0000');
+    agregarDatoB('P1', 1, '#ff0000');
     agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
+    agregarDatoB('P3', 1, '#0000ff');
     agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
+    agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
+    agregarDatoB('P7', 0, '#ff0033');
+    agregarDatoB('P8', 0, '#33ff00');
+    agregarDatoB('P9', 0, '#0033ff');
+    agregarDatoB('P10', 0, '#3300ff');
+    agregarDatoB('P11', 1, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
     agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
+    agregarDatoB('P14', 0, '#ff0033');
+    agregarDatoB('P15', 0, '#00ff33');
 }
 function agregarDatosIE13() {
     agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
+    agregarDato('P5', 2, '#049974');
+    agregarDato('P6', 2, '#05ab7c');
     agregarDato('P7', 0, '#06bd84');
     agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P9', 1, '#08e994');
+    agregarDato('P10', 1, '#09f79c');
     agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P12', 1, '#0bb7ac');
+    agregarDato('P13', 2, '#0cafb4');
     agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
+    agregarDatoB('P1', 0, '#ff0000');
+    agregarDatoB('P2', 3, '#00ff00');
+    agregarDatoB('P3', 3, '#0000ff');
+    agregarDatoB('P4', 3, '#ffff00');
     agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
-function agregarDatosIE14() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
+    agregarDatoB('P6', 2, '#00ffff');
+    agregarDatoB('P7', 3, '#ff0033');
+    agregarDatoB('P8', 2, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 3, '#3300ff');
+    agregarDatoB('P11', 0, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
+    agregarDatoB('P13', 2, '#3300ff');
+    agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 0, '#00ff33');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
 }
+
 function agregarDatosIE15() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
+    agregarDato('P4', 1, '#03886c');
+    agregarDato('P5', 1, '#049974');
     agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
+    agregarDato('P7', 1, '#06bd84');
+    agregarDato('P8', 1, '#07d58c');
     agregarDato('P9', 0, '#08e994');
     agregarDato('P10', 0, '#09f79c');
     agregarDato('P11', 0, '#0affa4');
     agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P13', 1, '#0cafb4');
     agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
+    
+    agregarDatoB('P4', 3, '#ffff00');
     agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
+    agregarDatoB('P6', 0, '#00ffff');
+    agregarDatoB('P7', 3, '#ff0033');
+    agregarDatoB('P8', 2, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 2, '#3300ff');
+    agregarDatoB('P11', 1, '#ff3300');
+    agregarDatoB('P12', 2, '#00ff33');
+    agregarDatoB('P13', 3, '#3300ff');
+    agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 2, '#00ff33');
+
 }
 function agregarDatosIE16() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
+    agregarDato('P4', 1, '#03886c');
+    agregarDato('P5', 2, '#049974');
+    agregarDato('P6', 2, '#05ab7c');
     agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P8', 1, '#07d58c');
+    agregarDato('P9', 1, '#08e994');
+    agregarDato('P10', 2, '#09f79c');
     agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
+    agregarDato('P12', 1, '#0bb7ac');
+    agregarDato('P13', 1, '#0cafb4');
+    agregarDato('P14', 1, '#0d8cbc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
+
+    agregarDatoB('P4', 4, '#ffff00');
     agregarDatoB('P5', 3, '#ff00ff');
     agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
+    agregarDatoB('P7', 3, '#ff0033');
+    agregarDatoB('P8', 1, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 1, '#3300ff');
     agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
+    agregarDatoB('P12', 1, '#00ff33');
     agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
+    agregarDatoB('P14', 2, '#ff0033');
+    agregarDatoB('P15', 0, '#00ff33');
+
 }
 function agregarDatosIE17() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P4', 2, '#03886c');
+    agregarDato('P5', 2, '#049974');
+    agregarDato('P6', 1, '#05ab7c');
+    agregarDato('P7', 1, '#06bd84');
+    agregarDato('P8', 2, '#07d58c');
+    agregarDato('P9', 1, '#08e994');
+    agregarDato('P10', 1, '#09f79c');
     agregarDato('P11', 0, '#0affa4');
     agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P13', 2, '#0cafb4');
     agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
+   
+    agregarDatoB('P4', 4, '#ffff00');
+    agregarDatoB('P5', 2, '#ff00ff');
+    agregarDatoB('P6', 0, '#00ffff');
     agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
+    agregarDatoB('P8', 1, '#33ff00');
+    agregarDatoB('P9', 0, '#0033ff');
+    agregarDatoB('P10', 2, '#3300ff');
     agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
+    agregarDatoB('P12', 2, '#00ff33');
+    agregarDatoB('P13', 2, '#3300ff');
+    agregarDatoB('P14', 2, '#ff0033');
+    agregarDatoB('P15', 1, '#00ff33');
+
 }
 function agregarDatosIE18() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
+    agregarDato('P4', 1, '#03886c');
+    agregarDato('P5', 2, '#049974');
+    agregarDato('P6', 2, '#05ab7c');
+    agregarDato('P7', 3, '#06bd84');
+    agregarDato('P8', 2, '#07d58c');
+    agregarDato('P9', 2, '#08e994');
+    agregarDato('P10', 3, '#09f79c');
+    agregarDato('P11', 1, '#0affa4');
     agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
+    agregarDato('P13', 1, '#0cafb4');
+    agregarDato('P14', 1, '#0d8cbc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
-function agregarDatosIE19() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
     agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
+    agregarDatoB('P5', 1, '#ff00ff');
     agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
+    agregarDatoB('P7', 3, '#ff0033');
+    agregarDatoB('P8', 2, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 1, '#3300ff');
     agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
-function agregarDatosIE20() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
+    agregarDatoB('P12', 3, '#00ff33');
+    agregarDatoB('P13', 2, '#3300ff');
+    agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 1, '#00ff33');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
 }
+
 function agregarDatosIE21() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
-function agregarDatosIE22() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
+    agregarDatoB('P4', 3, '#ffff00');
+    agregarDatoB('P5', 1, '#ff00ff');
+    agregarDatoB('P6', 0, '#00ffff');
     agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
+    agregarDatoB('P8', 1, '#33ff00');
+    agregarDatoB('P9', 0, '#0033ff');
+    agregarDatoB('P10', 0, '#3300ff');
+    agregarDatoB('P11', 1, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
     agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
-}
-function agregarDatosIE23() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 0, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 0, '#0affa4');
-    agregarDato('P12', 0, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 0, '#0e8eb4');
-    agregarDato('P16', 0, '#0f90bc');
+    agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 1, '#00ff33');
 
-    agregarDatoB('P1', 2, '#ff0000');
-    agregarDatoB('P2', 1, '#00ff00');
-    agregarDatoB('P3', 4, '#0000ff');
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 3, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 6, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 4, '#00ff33');
-    agregarDatoB('P16', 5, '#ff3300');
-    agregarDatoB('P17', 1, '#00ff33');
-    agregarDatoB('P18', 2, '#ff0033');
-    agregarDatoB('P19', 4, '#00ff33');
-    agregarDatoB('P20', 2, '#ff3300');
 }
+
 
 // Función para agregar datos al gráfico de pie
 function agregarDato(label, valor, color) {
@@ -1260,3 +888,9 @@ function agregarDatoB(label, valor, color) {
     chartB.data.datasets[0].backgroundColor.push(color);
 }
 
+// Función para agregar datos al gráfico de barras
+function agregarDatoC(label, valor, color) {
+    chartC.data.labels.push(label);
+    chartC.data.datasets[0].data.push(valor);
+    chartC.data.datasets[0].backgroundColor.push(color);
+}

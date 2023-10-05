@@ -7,19 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Resultados</title>
+    <title>Resultados 2018</title>
 </head>
 
 <body>
+
+
     <header class="header">
 
         <nav class="PanelIZ">
 
-            <div class="OLIM" style="
-			
-			
-			transform: translate(3%, 27%);">
-                <h1>Olimpiadas<br>Matematicas<br>2019</h1>
+
+
+            <div class="OLIM" style="transform: translate(3%, 27%);">
+            	<!--<button class="btn-2" href="../../../index.html"style="bottom:100px">Atras</button>-->
+                <h1>Olimpiadas<br>Matematicas<br>2018</h1>
                 
 
                 <h2><strong>Institución</strong><br>educativa #:</h2>
@@ -64,11 +66,14 @@
 
 
         <main class="mainCEN">
+
+        	
             <div class="Titulo">
+
                 <h2>Consolidado de preguntas</h2>
                 <h3>Año:</h3>
             </div>
-            <div class="informacion">
+            <!--<div class="informacion">
                 <h4>Numero de estudiantes que participaron:</h4>
 
                 <h4>Porcentaje de acierto por pregunta:</h4>
@@ -76,9 +81,9 @@
                 <h4>Posición de la Institución:</h4>
 
 
-            </div>
+            </div>-->
 
-
+            <br>
 
 
             <canvas id="barChart" ></canvas>
@@ -86,38 +91,54 @@
 			
 			
 			<center>
+				<h2>N° de alumnos que respondieron cada pregunta</h2>
+				<br>
+				<br>
 			<table>
 				<tr>
-					<td><div class="InfoGrafBA">
-                    <h4>% Preguntas Avanzadas</h3>
-                        <div class="chart-container">
-                            <canvas id="chart"></canvas>
-                            <div class="chart-data">
-                                <ul id="data-list"></ul>
-                            </div>
-                        </div>
-					 
-                </div></td>
+					<td>
+						<div class="InfoGrafAV">
+	                    <h4>% Preguntas Avanzadas</h4>
+	                        <div class="chart-container">
+	                            <canvas id="chart"></canvas>
+	                            <div class="chart-data">
+	                                <ul id="data-list"></ul>
+	                            </div>
+	                        </div>					 
+		                </div>
+		            </td>
 					
-					<td><div class="InfoGrafAV">
-                   <h4>% Preguntas Basicas</h3>
-				    <div class="chart-container">
-                            <canvas id="chartB"></canvas>
-                            <div class="chart-data">
+					<td>
+						<div class="InfoGrafAV">
+                   			<h4>% Preguntas Intermedias</h3>
+				    			<div class="chart-container">
+                           		<canvas id="chartB"></canvas>
+                            	<div class="chart-data">
                               <ul id="data-list"></ul>
                             </div>
                           </div>                    
-                </div></td>
+                		</div>
+            		</td>
+					<td>
+						<div class="InfoGrafAV">
+	                   		<h4>% Preguntas Basicas</h3>
+					   		 	<div class="chart-container">
+	                            	<canvas id="chartC"></canvas>
+	                            <div class="chart-data">
+	                            <ul id="data-list"></ul>
+	                            </div>
+	                          </div>                    
+	                	</div>
+            		</td>
 				</tr>
-				
 			</table>
 			</center>
 			
                 
         </main>
-        <aside class="PanelDE">
+        <!--<aside class="PanelDE">
             <h1>afasdas</h1>
-        </aside>
+        </aside>-->
 
     </header>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
