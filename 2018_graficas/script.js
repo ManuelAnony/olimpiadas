@@ -157,7 +157,6 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [4, 4, 8 ];
             chartB.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15'];
             chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15','P16','P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [9,  10, 9,  11, 10, 4,  11, 11, 10, 7,  10, 3,  10, 10, 0, 5, 3, 11,  9,   8];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
