@@ -1,4 +1,4 @@
-// 2017 Preguntas 
+// 2018 Preguntas 
 
 // Generar colores aleatorios en formato rgba
 function generarColorAleatorio() {
