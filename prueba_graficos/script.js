@@ -425,222 +425,275 @@ function agregarDatosIE1() {
     agregarDato('P4', 2, '#03886c');
     agregarDato('P5', 1, '#049974');
     agregarDato('P6', 1, '#05ab7c');
-    agregarDato('P7', 4, '#06bd84');
-    agregarDato('P8', 2, '#07d58c');
-    agregarDato('P9', 1, '#08e994');
-    agregarDato('P10', 3, '#09f79c');
-    agregarDato('P11', 1, '#0affa4');
-    agregarDato('P12', 1, '#0bb7ac');
+    agregarDato('P7', 1, '#06bd84');
+    agregarDato('P8', 1, '#07d58c');
+    agregarDato('P9', 2, '#08e994');
+    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P11', 2, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
     agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 3, '#0d8cbc');
-    agregarDato('P15', 1, '#0d8cbc');
+    agregarDato('P14', 0, '#0d8cbc');
+    agregarDato('P15', 0, '#0d8cbc');
     agregarDato('P16', 1, '#0d8cbc');
     
 
-    agregarDatoB('P4', 5, '#ffff00');
-    agregarDatoB('P5', 2, '#ff00ff');
-    agregarDatoB('P6', 4, '#00ffff');
-    agregarDatoB('P7', 6, '#ff0033');
-    agregarDatoB('P8', 6, '#33ff00');
-    agregarDatoB('P9', 3, '#0033ff');
-    agregarDatoB('P10', 5, '#3300ff');
-    agregarDatoB('P11', 6, '#ff3300');
-    agregarDatoB('P12', 4, '#00ff33');
-    agregarDatoB('P13', 3, '#3300ff');
-    agregarDatoB('P14', 1, '#ff0033');
-    agregarDatoB('P15', 5, '#00ff33');
+    agregarDatoB('P4', 0, '#ffff00');
+    agregarDatoB('P5', 4, '#ff00ff');
+    agregarDatoB('P6', 6, '#00ffff');
+    agregarDatoB('P7', 7, '#ff0033');
+    agregarDatoB('P8', 2, '#33ff00');
+    agregarDatoB('P9', 2, '#0033ff');
+    agregarDatoB('P10', 6, '#3300ff');
+    agregarDatoB('P11', 3, '#ff3300');
+    agregarDatoB('P12', 0, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 6, '#ff0033');
+    agregarDatoB('P15', 6, '#00ff33');
+    agregarDatoB('P16', 2, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 1, '#00ff33');
+    agregarDatoB('P19', 0, '#00ff33');
+    agregarDatoB('P20', 5, '#00ff33');
 
 }
 
 // Función para agregar datos específicos de IE-2
 function agregarDatosIE2() {
     
-    agregarDatoB('P4', 3, '#ffff00');
-    agregarDatoB('P5', 0, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 1, '#ff0033');
-    agregarDatoB('P8', 4, '#33ff00');
-    agregarDatoB('P9', 0, '#0033ff');
-    agregarDatoB('P10', 3, '#3300ff');
-    agregarDatoB('P11', 4, '#ff3300');
-    agregarDatoB('P12', 3, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 1, '#ff0033');
-    agregarDatoB('P15', 3, '#00ff33');
-}
-
-function agregarDatosIE3() {
-
-}
-function agregarDatosIE4() {
     agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 3, '#049974');
-    agregarDato('P6', 4, '#05ab7c');
-    agregarDato('P7', 4, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 1, '#08e994');
-    agregarDato('P10', 4, '#09f79c');
-    agregarDato('P11', 4, '#0affa4');
-    agregarDato('P12', 4, '#0bb7ac');
-    agregarDato('P13', 1, '#0cafb4');
-    agregarDato('P14', 3, '#0d8cbc');
-    agregarDato('P15', 2, '#0d8cbc');   
-
+    agregarDato('P5', 0, '#049974');
+    agregarDato('P6', 1, '#05ab7c');
+    agregarDato('P7', 1, '#06bd84');
+    agregarDato('P8', 1, '#07d58c');
+    agregarDato('P9', 2, '#08e994');
+    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P11', 0, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
+    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P14', 1, '#0d8cbc');
+    agregarDato('P15', 0, '#0d8cbc');
+    agregarDato('P16', 2, '#0d8cbc');
     
-    agregarDatoB('P4', 8, '#ffff00');
-    agregarDatoB('P5', 1, '#ff00ff');
-    agregarDatoB('P6', 6, '#00ffff');
-    agregarDatoB('P7', 7, '#ff0033');
-    agregarDatoB('P8', 8, '#33ff00');
-    agregarDatoB('P9', 6, '#0033ff');
-    agregarDatoB('P10', 8, '#3300ff');
-    agregarDatoB('P11', 7, '#ff3300');
-    agregarDatoB('P12', 4, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 2, '#ff0033');
-    agregarDatoB('P15', 7, '#00ff33');
-    
-}
 
-function agregarDatosIE5() {
-    agregarDato('P4', 8, '#03886c');
-    agregarDato('P5', 1, '#049974');
-    agregarDato('P6', 4, '#05ab7c');
-    agregarDato('P7', 4, '#06bd84');
-    agregarDato('P8', 8, '#07d58c');
-    agregarDato('P9', 8, '#08e994');
-    agregarDato('P10', 8, '#09f79c');
-    agregarDato('P11', 8, '#0affa4');
-    agregarDato('P12', 4, '#0bb7ac');
-    agregarDato('P13', 1, '#0cafb4');
-    agregarDato('P14', 7, '#0d8cbc');
-    agregarDato('P15', 5, '#0d8cbc');   
-
-    
     agregarDatoB('P4', 0, '#ffff00');
     agregarDatoB('P5', 2, '#ff00ff');
     agregarDatoB('P6', 3, '#00ffff');
     agregarDatoB('P7', 2, '#ff0033');
     agregarDatoB('P8', 2, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
+    agregarDatoB('P9', 1, '#0033ff');
     agregarDatoB('P10', 3, '#3300ff');
-    agregarDatoB('P11', 3, '#ff3300');
-    agregarDatoB('P12', 3, '#00ff33');
-    agregarDatoB('P13', 3, '#3300ff');
+    agregarDatoB('P11', 1, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
+    agregarDatoB('P13', 1, '#3300ff');
     agregarDatoB('P14', 3, '#ff0033');
-    agregarDatoB('P15', 1, '#00ff33');
-}
-
-function agregarDatosIE6() {
-    agregarDatoB('P4', 6, '#03886c');
-    agregarDatoB('P5', 2, '#049974');
-    agregarDatoB('P6', 3, '#05ab7c');
-    agregarDatoB('P7', 4, '#06bd84');
-    agregarDatoB('P8', 5, '#07d58c');
-    agregarDatoB('P9', 3, '#08e994');
-    agregarDatoB('P10', 6, '#09f79c');
-    agregarDatoB('P11', 5, '#0affa4');
-    agregarDatoB('P12', 4, '#0bb7ac');
-    agregarDatoB('P13', 1, '#0cafb4');
-    agregarDatoB('P14', 4, '#0d8cbc');
-    agregarDatoB('P15', 6, '#0d8cbc');
-
-
-    
-    agregarDato('P4', 0, '#ffff00');
-    agregarDato('P5', 2, '#ff00ff');
-    agregarDato('P6', 3, '#00ffff');
-    agregarDato('P7', 3, '#ff0033');
-    agregarDato('P8', 1, '#33ff00');
-    agregarDato('P9', 0, '#0033ff');
-    agregarDato('P10', 2, '#3300ff');
-    agregarDato('P11', 3, '#ff3300');
-    agregarDato('P12', 3, '#00ff33');
-    agregarDato('P13', 2, '#3300ff');
-    agregarDato('P14', 1, '#ff0033');
-    agregarDato('P15', 2, '#00ff33');
-
-}
-function agregarDatosIE7() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 3, '#049974');
-    agregarDato('P6', 4, '#05ab7c');
-    agregarDato('P7', 3, '#06bd84');
-    agregarDato('P8', 3, '#07d58c');
-    agregarDato('P9', 2, '#08e994');
-    agregarDato('P10', 2, '#09f79c');
-    agregarDato('P11', 2, '#0affa4');
-    agregarDato('P12', 4, '#0bb7ac');
-    agregarDato('P13', 1, '#0cafb4');
-    agregarDato('P14', 3, '#0d8cbc');
-    agregarDato('P15', 1, '#0d8cbc');
-
-
-    
-    agregarDatoB('P4', 7, '#ffff00');
-    agregarDatoB('P5', 0, '#ff00ff');
-    agregarDatoB('P6', 4, '#00ffff');
-    agregarDatoB('P7', 5, '#ff0033');
-    agregarDatoB('P8', 7, '#33ff00');
-    agregarDatoB('P9', 6, '#0033ff');
-    agregarDatoB('P10', 6, '#3300ff');
-    agregarDatoB('P11', 7, '#ff3300');
-    agregarDatoB('P12', 5, '#00ff33');
-    agregarDatoB('P13', 0, '#3300ff');
-    agregarDatoB('P14', 4, '#ff0033');
     agregarDatoB('P15', 3, '#00ff33');
+    agregarDatoB('P16', 1, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 2, '#00ff33');
+    agregarDatoB('P19', 1, '#00ff33');
+    agregarDatoB('P20', 2, '#00ff33');
 }
-function agregarDatosIE8() {
 
+function agregarDatosIE3() {    
+
+    agregarDatoB('P4', 0, '#ffff00');
+    agregarDatoB('P5', 1, '#ff00ff');
+    agregarDatoB('P6', 1, '#00ffff');
+    agregarDatoB('P7', 1, '#ff0033');
+    agregarDatoB('P8', 2, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 2, '#3300ff');
+    agregarDatoB('P11', 0, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 0, '#00ff33');
+    agregarDatoB('P16', 1, '#00ff33');
+    agregarDatoB('P17', 1, '#00ff33');
+    agregarDatoB('P18', 0, '#00ff33');
+    agregarDatoB('P19', 1, '#00ff33');
+    agregarDatoB('P20', 1, '#00ff33');
 }
 
-function agregarDatosIE9() {
+function agregarDatosIE4() {
     agregarDato('P4', 0, '#03886c');
     agregarDato('P5', 1, '#049974');
     agregarDato('P6', 1, '#05ab7c');
     agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 1, '#09f79c');
-    agregarDato('P11', 1, '#0affa4');
-    agregarDato('P12', 1, '#0bb7ac');
-    agregarDato('P13', 0, '#0cafb4');
-    agregarDato('P14', 0, '#0d8cbc');
-    agregarDato('P15', 1, '#0d8cbc');
-
-
-    
-    agregarDatoB('P4', 2, '#ffff00');
-    agregarDatoB('P5', 0, '#ff00ff');
-    agregarDatoB('P6', 0, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
-    agregarDatoB('P8', 2, '#33ff00');
-    agregarDatoB('P9', 1, '#0033ff');
-    agregarDatoB('P10', 2, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 0, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 1, '#ff0033');
-    agregarDatoB('P15', 2, '#00ff33');
-}
-
-function agregarDatosIE11() {
-    agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 1, '#049974');
-    agregarDato('P6', 0, '#05ab7c');
-    agregarDato('P7', 0, '#06bd84');
-    agregarDato('P8', 0, '#07d58c');
+    agregarDato('P8', 1, '#07d58c');
     agregarDato('P9', 1, '#08e994');
     agregarDato('P10', 1, '#09f79c');
     agregarDato('P11', 0, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
+    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P14', 0, '#0d8cbc');
+    agregarDato('P15', 0, '#0d8cbc');
+    agregarDato('P16', 0, '#0d8cbc');
+    
+
+    agregarDatoB('P4', 1, '#ffff00');
+    agregarDatoB('P5', 1, '#ff00ff');
+    agregarDatoB('P6', 4, '#00ffff');
+    agregarDatoB('P7', 3, '#ff0033');
+    agregarDatoB('P8', 3, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 3, '#3300ff');
+    agregarDatoB('P11', 0, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 4, '#ff0033');
+    agregarDatoB('P15', 3, '#00ff33');
+    agregarDatoB('P16', 0, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 1, '#00ff33');
+    agregarDatoB('P19', 1, '#00ff33');
+    agregarDatoB('P20', 2, '#00ff33');
+    
+}
+
+function agregarDatosIE5() {
+    agregarDato('P4', 4, '#03886c');
+    agregarDato('P5', 0, '#049974');
+    agregarDato('P6', 0, '#05ab7c');
+    agregarDato('P7', 0, '#06bd84');
+    agregarDato('P8', 0, '#07d58c');
+    agregarDato('P9', 2, '#08e994');
+    agregarDato('P10', 1, '#09f79c');
+    agregarDato('P11', 0, '#0affa4');
     agregarDato('P12', 1, '#0bb7ac');
+    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P14', 1, '#0d8cbc');
+    agregarDato('P15', 0, '#0d8cbc');
+    agregarDato('P16', 1, '#0d8cbc');
+    
+
+    agregarDatoB('P4', 0, '#ffff00');
+    agregarDatoB('P5', 4, '#ff00ff');
+    agregarDatoB('P6', 6, '#00ffff');
+    agregarDatoB('P7', 7, '#ff0033');
+    agregarDatoB('P8', 2, '#33ff00');
+    agregarDatoB('P9', 2, '#0033ff');
+    agregarDatoB('P10', 6, '#3300ff');
+    agregarDatoB('P11', 3, '#ff3300');
+    agregarDatoB('P12', 0, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 6, '#ff0033');
+    agregarDatoB('P15', 6, '#00ff33');
+    agregarDatoB('P16', 2, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 1, '#00ff33');
+    agregarDatoB('P19', 0, '#00ff33');
+    agregarDatoB('P20', 5, '#00ff33');
+}
+
+function agregarDatosIE6() {
+    agregarDato('P4', 0, '#03886c');
+    agregarDato('P5', 0, '#049974');
+    agregarDato('P6', 1, '#05ab7c');
+    agregarDato('P7', 1, '#06bd84');
+    agregarDato('P8', 1, '#07d58c');
+    agregarDato('P9', 2, '#08e994');
+    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P11', 0, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
+    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P14', 1, '#0d8cbc');
+    agregarDato('P15', 0, '#0d8cbc');
+    agregarDato('P16', 2, '#0d8cbc');
+    
+
+    agregarDatoB('P4', 2, '#ffff00');
+    agregarDatoB('P5', 7, '#ff00ff');
+    agregarDatoB('P6', 7, '#00ffff');
+    agregarDatoB('P7', 8, '#ff0033');
+    agregarDatoB('P8', 7, '#33ff00');
+    agregarDatoB('P9', 4, '#0033ff');
+    agregarDatoB('P10', 9, '#3300ff');
+    agregarDatoB('P11', 4, '#ff3300');
+    agregarDatoB('P12', 0, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 8, '#ff0033');
+    agregarDatoB('P15', 9, '#00ff33');
+    agregarDatoB('P16', 3, '#00ff33');
+    agregarDatoB('P17', 1, '#00ff33');
+    agregarDatoB('P18', 1, '#00ff33');
+    agregarDatoB('P19', 4, '#00ff33');
+    agregarDatoB('P20', 7, '#00ff33');
+}
+
+function agregarDatosIE7() {
+    agregarDato('P4', 0, '#03886c');
+    agregarDato('P5', 0, '#049974');
+    agregarDato('P6', 2, '#05ab7c');
+    agregarDato('P7', 0, '#06bd84');
+    agregarDato('P8', 0, '#07d58c');
+    agregarDato('P9', 3, '#08e994');
+    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P11', 2, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
     agregarDato('P13', 1, '#0cafb4');
     agregarDato('P14', 0, '#0d8cbc');
+    agregarDato('P15', 0, '#0d8cbc');
+    agregarDato('P16', 1, '#0d8cbc');
+    
 
-    agregarDatoB('P1', 0, '#ff0000');
-    agregarDatoB('P2', 2, '#00ff00');
-    agregarDatoB('P3', 2, '#0000ff');
-    agregarDatoB('P4', 1, '#ffff00');
+    agregarDatoB('P4', 2, '#ffff00');
+    agregarDatoB('P5', 4, '#ff00ff');
+    agregarDatoB('P6', 4, '#00ffff');
+    agregarDatoB('P7', 7, '#ff0033');
+    agregarDatoB('P8', 2, '#33ff00');
+    agregarDatoB('P9', 2, '#0033ff');
+    agregarDatoB('P10', 4, '#3300ff');
+    agregarDatoB('P11', 3, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 6, '#ff0033');
+    agregarDatoB('P15', 6, '#00ff33');
+    agregarDatoB('P16', 3, '#00ff33');
+    agregarDatoB('P17', 3, '#00ff33');
+    agregarDatoB('P18', 2, '#00ff33');
+    agregarDatoB('P19', 2, '#00ff33');
+    agregarDatoB('P20', 4, '#00ff33');
+}
+
+function agregarDatosIE8() {
+    agregarDato('P4', 0, '#03886c');
+    agregarDato('P5', 0, '#049974');
+    agregarDato('P6', 0, '#05ab7c');
+    agregarDato('P7', 0, '#06bd84');
+    agregarDato('P8', 1, '#07d58c');
+    agregarDato('P9', 1, '#08e994');
+    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P11', 0, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
+    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P14', 0, '#0d8cbc');
+    agregarDato('P15', 0, '#0d8cbc');
+    agregarDato('P16', 1, '#0d8cbc');
+    
+
+    agregarDatoB('P4', 0, '#ffff00');
+    agregarDatoB('P5', 0, '#ff00ff');
+    agregarDatoB('P6', 1, '#00ffff');
+    agregarDatoB('P7', 2, '#ff0033');
+    agregarDatoB('P8', 0, '#33ff00');
+    agregarDatoB('P9', 0, '#0033ff');
+    agregarDatoB('P10', 1, '#3300ff');
+    agregarDatoB('P11', 1, '#ff3300');
+    agregarDatoB('P12', 0, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 1, '#00ff33');
+    agregarDatoB('P16', 2, '#00ff33');
+    agregarDatoB('P17', 1, '#00ff33');
+    agregarDatoB('P18', 0, '#00ff33');
+    agregarDatoB('P19', 2, '#00ff33');
+    agregarDatoB('P20', 2, '#00ff33');
+
+}
+
+function agregarDatosIE9() {
+    agregarDatoB('P4', 0, '#ffff00');
     agregarDatoB('P5', 1, '#ff00ff');
     agregarDatoB('P6', 1, '#00ffff');
     agregarDatoB('P7', 1, '#ff0033');
@@ -648,73 +701,97 @@ function agregarDatosIE11() {
     agregarDatoB('P9', 0, '#0033ff');
     agregarDatoB('P10', 0, '#3300ff');
     agregarDatoB('P11', 0, '#ff3300');
-    agregarDatoB('P12', 1, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
+    agregarDatoB('P12', 0, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
     agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 1, '#00ff33');
+    agregarDatoB('P16', 0, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 0, '#00ff33');
+    agregarDatoB('P19', 0, '#00ff33');
+    agregarDatoB('P20', 1, '#00ff33');
+}
+
+function agregarDatosIE10() {
+    
+    
+    agregarDatoB('P4', 0, '#ffff00');
+    agregarDatoB('P5', 1, '#ff00ff');
+    agregarDatoB('P6', 1, '#00ffff');
+    agregarDatoB('P7', 0, '#ff0033');
+    agregarDatoB('P8', 1, '#33ff00');
+    agregarDatoB('P9', 0, '#0033ff');
+    agregarDatoB('P10', 0, '#3300ff');
+    agregarDatoB('P11', 0, '#ff3300');
+    agregarDatoB('P12', 0, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 0, '#ff0033');
     agregarDatoB('P15', 0, '#00ff33');
+    agregarDatoB('P16', 0, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 1, '#00ff33');
+    agregarDatoB('P19', 1, '#00ff33');
+    agregarDatoB('P20', 1, '#00ff33');
 
 }
 
 
 function agregarDatosIE11() {
     agregarDato('P4', 0, '#03886c');
-    agregarDato('P5', 1, '#049974');
+    agregarDato('P5', 0, '#049974');
     agregarDato('P6', 1, '#05ab7c');
-    agregarDato('P7', 1, '#06bd84');
+    agregarDato('P7', 0, '#06bd84');
     agregarDato('P8', 1, '#07d58c');
     agregarDato('P9', 1, '#08e994');
-    agregarDato('P10', 0, '#09f79c');
-    agregarDato('P11', 1, '#0affa4');
-    agregarDato('P12', 1, '#0bb7ac');
+    agregarDato('P10', 1, '#09f79c');
+    agregarDato('P11', 0, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
     agregarDato('P13', 1, '#0cafb4');
-    agregarDato('P14', 1, '#0d8cbc');
+    agregarDato('P14', 0, '#0d8cbc');
     agregarDato('P15', 0, '#0d8cbc');
+    agregarDato('P16', 0, '#0d8cbc');
 
 
     
-    agregarDatoB('P4', 3, '#ffff00');
+    agregarDatoB('P4', 1, '#ffff00');
     agregarDatoB('P5', 2, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 2, '#ff0033');
+    agregarDatoB('P6', 2, '#00ffff');
+    agregarDatoB('P7', 1, '#ff0033');
     agregarDatoB('P8', 2, '#33ff00');
-    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P9', 0, '#0033ff');
     agregarDatoB('P10', 2, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
+    agregarDatoB('P11', 0, '#ff3300');
     agregarDatoB('P12', 2, '#00ff33');
-    agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 1, '#ff0033');
-    agregarDatoB('P15', 1, '#00ff33');
+    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P14', 2, '#ff0033');
+    agregarDatoB('P15', 0, '#00ff33');
+    agregarDatoB('P16', 1, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 2, '#00ff33');
+    agregarDatoB('P19', 1, '#00ff33');
+    agregarDatoB('P20', 3, '#00ff33');
 }
 
-function agregarDatosIE12() {
-    
-    agregarDatoB('P4', 0, '#ffff00');
-    agregarDatoB('P5', 0, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 1, '#ff0033');
-    agregarDatoB('P8', 1, '#33ff00');
-    agregarDatoB('P9', 0, '#0033ff');
-    agregarDatoB('P10', 1, '#3300ff');
-    agregarDatoB('P11', 1, '#ff3300');
-    agregarDatoB('P12', 1, '#00ff33');
-    agregarDatoB('P13', 0, '#3300ff');
-    agregarDatoB('P14', 0, '#ff0033');
-    agregarDatoB('P15', 0, '#00ff33');
-}
+
 function agregarDatosIE13() {
     
-    agregarDatoB('P4', 2, '#ffff00');
+    agregarDatoB('P4', 1, '#ffff00');
     agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 0, '#00ffff');
     agregarDatoB('P7', 1, '#ff0033');
-    agregarDatoB('P8', 3, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 3, '#3300ff');
-    agregarDatoB('P11', 2, '#ff3300');
-    agregarDatoB('P12', 2, '#00ff33');
+    agregarDatoB('P8', 0, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 0, '#3300ff');
+    agregarDatoB('P11', 0, '#ff3300');
+    agregarDatoB('P12', 0, '#00ff33');
     agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 0, '#ff0033');
-    agregarDatoB('P15', 1, '#00ff33');
+    agregarDatoB('P14', 1, '#ff0033');
+    agregarDatoB('P15', 0, '#00ff33');
+    agregarDatoB('P16', 1, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 0, '#00ff33');
+    agregarDatoB('P19', 0, '#00ff33');
+    agregarDatoB('P20', 1, '#00ff33');
 
 }
 
@@ -723,46 +800,88 @@ function agregarDatosIE14() {
     agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 0, '#00ffff');
     agregarDatoB('P7', 1, '#ff0033');
-    agregarDatoB('P8', 1, '#33ff00');
-    agregarDatoB('P9', 0, '#0033ff');
-    agregarDatoB('P10', 1, '#3300ff');
-    agregarDatoB('P11', 1, '#ff3300');
+    agregarDatoB('P8', 0, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 0, '#3300ff');
+    agregarDatoB('P11', 0, '#ff3300');
     agregarDatoB('P12', 0, '#00ff33');
-    agregarDatoB('P13', 0, '#3300ff');
+    agregarDatoB('P13', 1, '#3300ff');
     agregarDatoB('P14', 1, '#ff0033');
-    agregarDatoB('P15', 1, '#00ff33');
+    agregarDatoB('P15', 0, '#00ff33');
+    agregarDatoB('P16', 1, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 0, '#00ff33');
+    agregarDatoB('P19', 0, '#00ff33');
+    agregarDatoB('P20', 1, '#00ff33');
 }
 
 function agregarDatosIE15() {
-
-}
-function agregarDatosIE16() {
     agregarDato('P4', 0, '#03886c');
     agregarDato('P5', 2, '#049974');
     agregarDato('P6', 2, '#05ab7c');
-    agregarDato('P7', 2, '#06bd84');
+    agregarDato('P7', 0, '#06bd84');
+    agregarDato('P8', 0, '#07d58c');
+    agregarDato('P9', 2, '#08e994');
+    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P11', 0, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
+    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P14', 0, '#0d8cbc');
+    agregarDato('P15', 0, '#0d8cbc');
+    agregarDato('P16', 0, '#0d8cbc');
+
+
+    agregarDatoB('P4', 2, '#ffff00');
+    agregarDatoB('P5', 2, '#ff00ff');
+    agregarDatoB('P6', 5, '#00ffff');
+    agregarDatoB('P7', 5, '#ff0033');
+    agregarDatoB('P8', 3, '#33ff00');
+    agregarDatoB('P9', 1, '#0033ff');
+    agregarDatoB('P10', 3, '#3300ff');
+    agregarDatoB('P11', 3, '#ff3300');
+    agregarDatoB('P12', 3, '#00ff33');
+    agregarDatoB('P13', 1, '#3300ff');
+    agregarDatoB('P14', 3, '#ff0033');
+    agregarDatoB('P15', 5, '#00ff33');
+    agregarDatoB('P16', 2, '#00ff33');
+    agregarDatoB('P17', 0, '#00ff33');
+    agregarDatoB('P18', 0, '#00ff33');
+    agregarDatoB('P19', 2, '#00ff33');
+    agregarDatoB('P20', 3, '#00ff33');
+}
+function agregarDatosIE16() {
+    agregarDato('P4', 0, '#03886c');
+    agregarDato('P5', 1, '#049974');
+    agregarDato('P6', 0, '#05ab7c');
+    agregarDato('P7', 0, '#06bd84');
     agregarDato('P8', 1, '#07d58c');
-    agregarDato('P9', 0, '#08e994');
-    agregarDato('P10', 2, '#09f79c');
-    agregarDato('P11', 1, '#0affa4');
-    agregarDato('P12', 2, '#0bb7ac');
-    agregarDato('P13', 1, '#0cafb4');
-    agregarDato('P14', 1, '#0d8cbc');
+    agregarDato('P9', 1, '#08e994');
+    agregarDato('P10', 0, '#09f79c');
+    agregarDato('P11', 0, '#0affa4');
+    agregarDato('P12', 0, '#0bb7ac');
+    agregarDato('P13', 0, '#0cafb4');
+    agregarDato('P14', 0, '#0d8cbc');
+    agregarDato('P15', 1, '#0d8cbc');
     agregarDato('P15', 1, '#0d8cbc');
 
 
-    agregarDatoB('P4', 4, '#ffff00');
+    agregarDatoB('P4', 0, '#ffff00');
     agregarDatoB('P5', 2, '#ff00ff');
-    agregarDatoB('P6', 1, '#00ffff');
-    agregarDatoB('P7', 4, '#ff0033');
-    agregarDatoB('P8', 4, '#33ff00');
-    agregarDatoB('P9', 2, '#0033ff');
-    agregarDatoB('P10', 4, '#3300ff');
-    agregarDatoB('P11', 3, '#ff3300');
-    agregarDatoB('P12', 2, '#00ff33');
+    agregarDatoB('P6', 2, '#00ffff');
+    agregarDatoB('P7', 2, '#ff0033');
+    agregarDatoB('P8', 1, '#33ff00');
+    agregarDatoB('P9', 0, '#0033ff');
+    agregarDatoB('P10', 2, '#3300ff');
+    agregarDatoB('P11', 1, '#ff3300');
+    agregarDatoB('P12', 1, '#00ff33');
     agregarDatoB('P13', 1, '#3300ff');
-    agregarDatoB('P14', 2, '#ff0033');
-    agregarDatoB('P15', 1, '#00ff33');
+    agregarDatoB('P14', 3, '#ff0033');
+    agregarDatoB('P15', 3, '#00ff33');
+    agregarDatoB('P16', 1, '#00ff33');
+    agregarDatoB('P17', 1, '#00ff33');
+    agregarDatoB('P18', 1, '#00ff33');
+    agregarDatoB('P19', 0, '#00ff33');
+    agregarDatoB('P20', 2, '#00ff33');
 
 }
 
