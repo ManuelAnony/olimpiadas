@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #ffbfbfec;
+    background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -113,7 +113,7 @@ body {
 
 
 
-  #chartContainer {
+#chartContainer {
 
     width: 320px;
     height: 300px;
