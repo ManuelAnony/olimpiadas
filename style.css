@@ -77,9 +77,14 @@ body {
 }
 
 .navbar {
-    border: 1px solid #0d0d0d;
-    background-color: white;
+       /* border: 1px solid #0d0d0d; */
+    /* background-color: white; */
     display: flex;
+    width: 100%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
 
 }
 
@@ -467,6 +472,8 @@ background-color:#0d0d0d;
     text-transform: uppercase;
     border-radius: 50px;
 }
+
+
 
 .btn-2:hover {
     background-color: #06D28A;
