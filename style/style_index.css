@@ -360,19 +360,20 @@ body {
     display: block;
 }
 
-.products h1 {
+.section-resultados h1 {
     padding-top: 40px;
     text-align: center;
     opacity: none;
 }
 
-.products p {
+.section-resultados p {
     padding-top: 10px;
     text-align: center;
     opacity: none;
 }
 
-.product {
+.text-content-consulta {
+
     display: flex;
     align-items: center;
     padding: 25px;
@@ -381,12 +382,12 @@ body {
 
 }
 
-.product-img {
+.text-content-consulta-img {
     width: 50%;
     text-align: center;
 }
 
-.product-img h4 {
+.text-content-consulta-img h4 {
 
        /* display: block; */
     /* padding: 5px 7px; */
@@ -400,20 +401,20 @@ body {
     /* margin-bottom: 50px;*/
 }
 
-.product-img h1 {
+.text-content-consulta-img h1 {
     padding: 5px 7px;
     line-height: 15px;
     color: #00663D;
     font-weight: 1200;
 }
 
-.product-img img {
+.text-content-consulta-img img {
     text-align: center;
     width: 150px;
     height: 120px;
 }
 
-.product-txt {
+.text-content-consulta-txt {
     text-align: center;
     width: 50%;
     margin-left: 10px;
@@ -422,7 +423,7 @@ body {
 
 }
 
-.product-txt a {
+.text-content-consulta-txt a {
     margin-top: 80px;
     text-align: center;
     opacity: none;
@@ -431,7 +432,7 @@ body {
 
 }
 
-.product-txt h4 {
+.text-content-consulta-txt h4 {
     color: #007B3E;
     font-size: 18px;
     text-transform: uppercase;
@@ -441,7 +442,7 @@ body {
 
 }
 
-.product-txt h1 {
+.text-content-consulta-txt h1 {
     color: #007B3E;
     font-size: 18px;
     text-transform: uppercase;
@@ -451,13 +452,13 @@ body {
 
 }
 
-.product-txt p {
+.text-content-consulta-txt p {
     color: #007B3E;
     font-size: 16px;
     margin-bottom: 15px;
 }
 
-.product-txt span {
+.text-content-consulta-txt span {
     color: #007B3E;
     font-size: 18px;
     font-weight: 800;
@@ -586,7 +587,7 @@ background-color:#0d0d0d;
     font-weight: 550;
 }
 
-.horario {
+.section-pensamientos {
     display: inline-flex;
     padding: 20px 0px;
     /* background: radial-gradient(circle at center, rgb(255 255 255) 78%, rgba(0, 0, 0, 0) 70%); */
@@ -610,7 +611,7 @@ background-color:#0d0d0d;
     flex-direction: column;
 }
 
-.horario h3 {
+.section-pensamientos h3 {
     font-size: 20px;
     font-weight: 500;
     color: #ffffff;
@@ -618,12 +619,12 @@ background-color:#0d0d0d;
 
 }
 
-.horario h4 {
+.section-pensamientos h4 {
     text-transform: uppercase;
     text-align: center;
 }
 
-.horario h2 {
+.section-pensamientos h2 {
         display: flex;
     text-align: center;
     font-size: 45px;
@@ -654,7 +655,7 @@ background-color:#0d0d0d;
 
 }
 
-.horario-txt {
+.section-pensamientos-txt {
 
     display: flex;
     /*organizar texto*/
@@ -688,11 +689,22 @@ background-color:#0d0d0d;
 
 }
 
-.map {
 
-    /*oscurese el mapa*/
-    filter: grayscale(100%) invert(98%) contrast(78%) opacity(90%);
+
+.documentsinformations .titulo{
+    color: #366a2f;
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
+    height: 60px;
+    /* padding: 8px 30px 8px 30px; */
+    align-items: center;
+    color: #0c571e;
+    font-weight: 600;
+    margin-bottom:0;
 }
+
 .bar-documents{
     display:flex;
     padding-top:10px;
@@ -715,8 +727,9 @@ background-color:#0d0d0d;
     flex:1;
     display:flex;
     justify-content:center;
-padding:10px;
+    padding:10px;
 }
+
 .bar-documents .documents-row .document-columm img{
     height:32px;
 }
@@ -724,13 +737,37 @@ padding:10px;
     text-align: center;
     font-size:14px;
 }
+
+.documents{
+  
+}
+.documents .titulo{
+    padding:24px 0 24px 0;
+    width:100%;
+    font-size: 24px;
+    background: #3f8d21;
+    margin-bottom: 0;
+    color: #ffffff;
+}
 .documents-information{
-   padding:40px 10px 0px 10px;
+   padding:20px 40px 0px 40px;
     background-color:#fff;
     flex:1;
 }
+.documentsinformations .titulos{
+font-size:26px;
+height:50px;
+color: #267c2e;
+}
+
+.documentsinformations .parrafos{
+    font-size:16px;
+  
+
+}
 
 .footer {
+    padding-top: 15px;
     display: flex;
     color: #ffffff;
     flex-direction: row-reverse;
@@ -775,7 +812,7 @@ width:100px;
 
     }
 
-    .menu-2 {
+    .menu-socials {
         display: none;
 
     }
@@ -918,18 +955,18 @@ width:100px;
         font-size: 16px;
     }
 
-    .horario {
+    .section-pensamientos {
         padding: 30px;
         text-align: center;
         
     }
 
-    .horario-info h2 {
+    .section-pensamientos-info h2 {
         font-size: 50px;
         margin-bottom: 15px;
     }
 
-    .horario-txt {
+    .section-pensamientos-txt {
         flex-direction: column;
     }
 
