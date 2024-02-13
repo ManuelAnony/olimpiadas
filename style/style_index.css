@@ -535,17 +535,16 @@ background-color:#0d0d0d;
    width:200px;
  
 }
- .tittle{
-    height: 400px;
-    position: relative;
+.tittle-pensamiento {
+    width: 100%;
+    /* height: 400px; */
+    /* position: relative; */
     /* background-image: url(/icons-estados/Pensamientos.png); */
-    background-color: rgba(0, 0, 0, 0.0);
-    background-size: 350px 350px;
-    background-position: center;
-    border-radius: 12px;
+    /* background-color: rgba(0, 0, 0, 0.0); */
+    /* background-size: 350px 350px; */
+    /* background-position: center; */
+    /* border-radius: 12px;*/
 }
-
- 
 
  @keyframes shake {
     0% { transform: translate(0, 0); }
@@ -564,16 +563,6 @@ background-color:#0d0d0d;
     animation: shake 2s infinite;
 }
  
-
-.img-pensamieto {
-    max-width: 100%;
-    height: auto;
-    z-index: 100;
-    position: absolute;
-    height: 400px;
-    overflow: hidden;
-}
-
 
 .btn-pensamiento {
     display: contents; */
@@ -599,9 +588,10 @@ background-color:#0d0d0d;
 }
 
 .buttons-information{
-    display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-direction: column;
+
 }
 
 .buttons-information .icon{
@@ -610,6 +600,7 @@ background-color:#0d0d0d;
 .pensamiento{
     flex-direction: column;
 }
+
 
 .section-pensamientos h3 {
     font-size: 20px;
@@ -628,31 +619,42 @@ background-color:#0d0d0d;
         display: flex;
     text-align: center;
     font-size: 45px;
-    /* text-shadow: 1px 1px 1px #00663D, -1px -1px 1px #00663D; */
-    color: #00663d;
- ;
+    color: #fff;
     font-weight: 900;
     text-transform: uppercase;
     margin: 25px;
     align-items: center;
-    //background: linear-gradient(to bottom, #ffffff00, #ffffff 50%, #ffffff00);
     border-radius: 40px;
-    padding: 50px;
-
     animation: zoom 2s infinite;
 }
+
 
 @keyframes zoom{
     0%{transform:scale(1);
     opacity:70%;}
-20%{transform:scale(1.05); opacity:100%;}
-40%{transform:scale(1); opacity:70%;}
-60%{transform:scale(1.05); opacity:100%;}
-80%{transform:scale(1); opacity:70%;}
-80%{transform:scale(1.05); opacity:100%;}
+20%{
+    transform:scale(1.05);
+    opacity:100%;}
+40%{transform:scale(1);
+    opacity:70%;}
+60%{transform:scale(1.05);
+    opacity:100%;}
+80%{transform:scale(1);
+    opacity:70%;}
+80%{transform:scale(1.05); 
+    opacity:100%;}
 
 
 
+}
+
+.section-pensamientos {
+    display: inline-flex;
+    padding: 20px 0px;
+    /* background: radial-gradient(circle at center, rgb(255 255 255) 78%, rgba(0, 0, 0, 0) 70%); */
+    flex-direction: column;
+    background-color:transparent;
+    /* padding: 20px 20px;
 }
 
 .section-pensamientos-txt {
@@ -661,6 +663,21 @@ background-color:#0d0d0d;
     /*organizar texto*/
     text-align: justify;
     justify-content: baseline;
+
+}
+
+.section-pensamientos .pensamiento-nome{
+
+    justify-content: space-evenly;
+    font-size:20px;
+}
+.section-pensamientos .tittles-pensamientos{
+    color:#fff;
+
+}
+.section-pensamientos .text-pesamiento{
+   
+    color:#fff;
 
 }
 
@@ -705,6 +722,13 @@ background-color:#0d0d0d;
     margin-bottom:0;
 }
 
+.documents .documents-space-button{   
+    background-color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #378719;
+    font-weight: 700;
+}
 .bar-documents{
     display:flex;
     padding-top:10px;
