@@ -535,16 +535,16 @@ background-color:#0d0d0d;
  
 }
  .tittle{
-    height:400px;
-position:relative;
+    height: 400px;
+    position: relative;
+    /* background-image: url(/icons-estados/Pensamientos.png); */
+    background-color: rgba(0, 0, 0, 0.0);
+    background-size: 350px 350px;
+    background-position: center;
+    border-radius: 12px;
+}
 
-background-image: url('/icons-estados/Pensamientos.png');
-background-color: rgba(0, 0, 0, 0.0);
-background-size:350px 350px;
-background-position:center;
-border-radius:12px;
-
- }
+ 
 
  @keyframes shake {
     0% { transform: translate(0, 0); }
@@ -593,6 +593,7 @@ border-radius:12px;
     flex-direction: column;
     background-color: #fff;
     /* padding: 20px 20px;*/
+    //background-image: linear-gradient(to bottom, #ffffff, #000000);
     
 }
 
@@ -692,18 +693,68 @@ border-radius:12px;
     /*oscurese el mapa*/
     filter: grayscale(100%) invert(98%) contrast(78%) opacity(90%);
 }
-
-.footer {
-    margin-top: 40px;
-    padding: 100xp 0px;
+.bar-documents{
+    display:flex;
+    padding-top:10px;
+    color: #fff;
+    background-color: #3f8d21;
+    height: auto;
     display: flex;
-    justify-content: space-between;
-    background-color: #181818;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bar-documents .documents-row{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.bar-documents .documents-row .document-columm{
+    flex:1;
+    display:flex;
+    justify-content:center;
+padding:10px;
+}
+.bar-documents .documents-row .document-columm img{
+    height:32px;
+}
+.bar-documents .documents-row .document-columm .text{
+    text-align: center;
+    font-size:14px;
+}
+.documents-information{
+   padding:40px 10px 0px 10px;
+    background-color:#fff;
+    flex:1;
 }
 
+.footer {
+    display: flex;
+    color: #ffffff;
+    flex-direction: row-reverse;
+    //text-transform: uppercase;
+    margin-bottom: 25px;
+    font-size: 14px;
+    justify-content:space-around;
+    align-items:center;
+    //background: radial-gradient(circle, transparent, blue, green);
+    
+
+}
+
+.footer h4{
+    margin-top:40px;
+    font-size:14px;
+}
+
+.links{
+width:100px;
+}
 .links h4 {
     color: #ffffff;
-    text-transform: uppercase;
+   // text-transform: uppercase;
     margin-bottom: 25px;
 
 }
@@ -870,6 +921,7 @@ border-radius:12px;
     .horario {
         padding: 30px;
         text-align: center;
+        
     }
 
     .horario-info h2 {
