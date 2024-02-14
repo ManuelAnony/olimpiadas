@@ -532,7 +532,7 @@ background-color:#0d0d0d;
 }
 
 .panel img{
-   width:200px;
+   width:150px;
  
 }
 .tittle-pensamiento {
@@ -676,7 +676,7 @@ background-color:#0d0d0d;
 
 }
 .section-pensamientos .text-pesamiento{
-   
+   text-align:center;
     color:#fff;
 
 }
@@ -761,9 +761,31 @@ background-color:#0d0d0d;
     text-align: center;
     font-size:14px;
 }
+.bar-documents .documents-row .document-columm a{
+    flex: 1;
+display: flex;
+color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity, 1));
+color: #fff;
+text-decoration: none;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+transition:all 0.3s;
+}
+
+.bar-documents .documents-row .document-columm a:hover{
+   transform:scale(1.1);
+ 
+}
+
+/* Revisar animaciones por orden, padres e hijos
+#ley1:hover #ley2{
+    transform:scale(2);
+} */
+
 
 .documents{
-  
+  background-color:#fff;
 }
 .documents .titulo{
     padding:24px 0 24px 0;
@@ -774,10 +796,17 @@ background-color:#0d0d0d;
     color: #ffffff;
 }
 .documents-information{
-   padding:20px 40px 0px 40px;
+    margin:20px;
+   padding:20px 20px 0px 20px;
     background-color:#fff;
     flex:1;
+    transition:all 0.3s;
 }
+.section-pensamientos .text-pesamiento{
+    text-align:center;
+}
+
+
 .documentsinformations .titulos{
 font-size:26px;
 height:50px;
@@ -788,6 +817,16 @@ color: #267c2e;
     font-size:16px;
   
 
+}
+
+.documents-information:hover  {
+    margin-top:40px;
+    box-shadow: 0px 10px 10px rgb(74 231 3 / 48%);
+}
+ 
+.documents-information:hover .documents-space-button{
+background-color:#2b2b2b;
+color:red;
 }
 
 .footer {
