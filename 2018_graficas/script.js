@@ -165,6 +165,7 @@ function mostrarMensaje() {
             break;
 
         case 'IE - 2':
+            chart.data.label='No se encuentra informacion'
             chart.data.labels = [];
             chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#005954', '#01655c', '#027664'];

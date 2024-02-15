@@ -2,82 +2,91 @@
 
 // Generar colores aleatorios en formato rgba
 function generarColorAleatorio() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  const alpha = 0.5; // Establece la transparencia
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const alpha = 0.5; // Establece la transparencia
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
 const data = {
     labels: ['IE-1', 'IE-2', 'IE-3', 'IE-4',
         'IE-5', 'IE-6', 'IE-7', 'IE-8', 'IE- 9', 'IE-10',
         'IE-11', 'IE-12', 'IE-13', 'IE-14', 'IE-15', 'IE-16',
-        'IE-17', 'IE-18', 'IE-19', 'IE-20', 'IE-21', 'IE-22', 'IE-23',' ','TOTAL'],
+        'IE-17', 'IE-18', 'IE-19', 'IE-20', 'IE-21', 'IE-22', 'IE-23', ' ', 'TOTAL'],
     datasets: [{
         label: '2019 - Basico',
-        data: [71, 63, 0, 75, 72, 71, 77, 0, 55, 0, 60, 49, 54, 53, 0, 63, 55, 68, 50, 37, 65, 0, 57,0, 61],
+        data: [71, 63, 0, 75, 72, 71, 77, 0, 55, 0, 60, 49, 54, 53, 0, 63, 55, 68, 50, 37, 65, 0, 57, 0, 61],
         backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
         borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
         borderWidth: 1
-    },{
+    }, {
         label: '2019 - Intermedio',
-        data: [52, 39, 0, 51, 51, 51, 44, 0, 48, 0, 43, 40, 38, 45, 0, 46, 40, 53, 0, 0, 54, 0, 58,0, 47],
+        data: [52, 39, 0, 51, 51, 51, 44, 0, 48, 0, 43, 40, 38, 45, 0, 46, 40, 53, 0, 0, 54, 0, 58, 0, 47],
         backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
         borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
         borderWidth: 1
     },
-{
+    {
         label: '2019 - Avanzado',
-        data: [41, 0, 0, 49, 57, 50, 45, 0, 40, 0, 60, 0, 0, 0, 0, 45, 0, 42, 0, 0, 42, 0, 47,0, 47],
+        data: [41, 0, 0, 49, 57, 50, 45, 0, 40, 0, 60, 0, 0, 0, 0, 45, 0, 42, 0, 0, 42, 0, 47, 0, 47],
         backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
         borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
         borderWidth: 1
     },]
 };
 
- // Opciones del gráfico
-    const options = {
-      responsive: true,
-      scales: {
+// Opciones del gráfico
+const options = {
+    responsive: true,
+    scales: {
         y: {
-          beginAtZero: true
+            beginAtZero: true
         }
-      },
-      plugins: {
+    },
+    plugins: {
         datalabels: {
-          anchor: 'end',
-          align: 'end',
-          formatter: function(value, context) {
-            const institucionSeleccionada = document.getElementById('menuDesplegable').value;
-            if (context.dataIndex === data.labels.indexOf(institucionSeleccionada)) {
-              return value + '% (Usted está aquí)';
-            } else {
-              return value + '%';
+            anchor: 'end',
+            align: 'end',
+            formatter: function (value, context) {
+                const institucionSeleccionada = document.getElementById('menuDesplegable').value;
+                if (context.dataIndex === data.labels.indexOf(institucionSeleccionada)) {
+                    return value + '% (Usted está aquí)';
+                } else {
+                    return value + '%';
+                }
             }
-          }
         }
-      }
-    };
+    }
+};
 
-    // Crear el gráfico de barras
-    const barChart = new Chart(document.getElementById('barChart'), {
-      type: 'bar',
-      data: data,
-      options: options
-    });
+// Crear el gráfico de barras
+const barChart = new Chart(document.getElementById('barChart'), {
+    type: 'bar',
+    data: data,
+    options: options
+});
 
+
+
+//creacion de grafico circulares
 const ctx = document.getElementById('chart').getContext('2d');
 const chart = new Chart(ctx, {
-    type: 'pie',
+    type: 'bar',
     data: {
-        labels: [],
+        labels: ['Preguntas'],
         datasets: [{
+           label:'Num estudiantes que respondieron',
             data: [],
+
+
             backgroundColor: [],
         }]
     },
     options: {
+        tittle: {
+            text: 'hola'
+        },
         responsive: true,
         legend: {
             position: 'top',
@@ -87,10 +96,11 @@ const chart = new Chart(ctx, {
 
 const ctxB = document.getElementById('chartB').getContext('2d');
 const chartB = new Chart(ctxB, {
-    type: 'pie',
+    type: 'bar',
     data: {
-        labels: [],
+        labels: ['Preguntas'],
         datasets: [{
+            label: 'Num estudiantes que respondieron',
             data: [],
             backgroundColor: [],
         }]
@@ -107,7 +117,7 @@ const chartB = new Chart(ctxB, {
             fontSize: 1,
             boxWidth: 1
         },
-        responsive: false,
+        responsive: true,
         legend: {
             position: 'left',
         }
@@ -116,11 +126,14 @@ const chartB = new Chart(ctxB, {
 
 const ctxC = document.getElementById('chartC').getContext('2d');
 const chartC = new Chart(ctxC, {
-    type: 'pie',
+    type: 'bar',
     data: {
-        labels: [],
+        labels: ['Preguntas'],
+
+
         datasets: [{
-            data: [],
+            label: 'Num estudiantes que respondieron',
+            data: [''],
             backgroundColor: [],
         }]
     },
@@ -136,7 +149,7 @@ const chartC = new Chart(ctxC, {
             fontSize: 1,
             boxWidth: 1
         },
-        responsive: false,
+        responsive: true,
         legend: {
             position: 'left',
         }
@@ -149,15 +162,15 @@ function mostrarMensaje() {
 
     switch (institucionSeleccionada) {
         case 'IE - 1':
-            chart.data.labels = ['P1', 'P2' ,'P3'];
+            chart.data.labels = ['P1', 'P2', 'P3'];
             chart.data.datasets[0].data = [2, 4, 4];
             chart.data.datasets[0].backgroundColor = ['#005954', '#01655c', '#027664'];
 
-            chartB.data.labels = ['P1','P2','P3'];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
             chartB.data.datasets[0].data = [6, 6, 0];
             chartB.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15','P16','P17', 'P18', 'P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [5, 7, 6, 6, 6, 4, 4, 6, 6, 7, 3, 2, 5, 7, 2, 5, 3, 7, 5, 4];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
@@ -169,11 +182,11 @@ function mostrarMensaje() {
             chart.data.datasets[0].data = [];
             chart.data.datasets[0].backgroundColor = ['#005954', '#01655c', '#027664'];
 
-            chartB.data.labels = ['P1','P2','P3'];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
             chartB.data.datasets[0].data = [3, 4, 0];
             chartB.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15','P16','P17', 'P18', 'P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [6, 10, 6, 6, 7, 6, 4, 6, 7, 10, 1, 4, 8, 8, 4, 6, 3, 10, 6, 7];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
@@ -195,15 +208,15 @@ function mostrarMensaje() {
             break;
 
         case 'IE - 4':
-            chart.data.labels = ['P1','P2','P3'];
+            chart.data.labels = ['P1', 'P2', 'P3'];
             chart.data.datasets[0].data = [2, 4, 3];
             chart.data.datasets[0].backgroundColor = ['#005954', '#01655c', '#027664'];
 
-            chartB.data.labels = ['P1','P2','P3'];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
             chartB.data.datasets[0].data = [8, 8, 1];
             chartB.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15','P16','P17', 'P18', 'P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [10, 10, 7, 4, 10, 5, 6, 8, 7, 10, 8, 7, 9, 10, 6, 6, 3, 10, 7, 6];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
@@ -211,15 +224,15 @@ function mostrarMensaje() {
             break;
 
         case 'IE - 5':
-            chart.data.labels = ['P1','P2','P3'];
+            chart.data.labels = ['P1', 'P2', 'P3'];
             chart.data.datasets[0].data = [2, 3, 2];
             chart.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff'];
 
-            chartB.data.labels = ['P1','P2','P3'];
+            chartB.data.labels = ['P1', 'P2', 'P3'];
             chartB.data.datasets[0].data = [8, 8, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15','P16','P17', 'P18', 'P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [9, 10, 5, 9, 9, 4, 6, 8, 9, 10, 5, 3, 7, 9, 4, 7, 5, 10, 8, 7];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
 
@@ -235,10 +248,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [5, 6, 1];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [7, 9, 3, 6, 8, 5, 3, 7, 9, 8, 6, 7, 5, 8, 6, 5, 4, 8, 7, 6];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE6(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -251,10 +264,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [8, 8, 1];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [7, 8, 7, 6, 5, 3, 4, 8, 8, 8, 4, 4, 8, 7, 8, 5, 5, 8, 7, 3];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE7(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -283,10 +296,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [2, 2, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [5, 9, 6, 5, 7, 1, 4, 7, 7, 9, 2, 4, 4, 6, 3, 3, 5, 10, 7, 5];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE9(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -315,10 +328,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [2, 3, 1];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [3, 6, 5, 4, 6, 3, 1, 2, 4, 6, 1, 2, 1, 5, 3, 4, 4, 5, 3, 4];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE11(); // Llamada a la función para agregar datos específicos de IE-2 voy aca 5/10/2023
             break;
 
@@ -331,10 +344,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [1, 1, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
-            chartC.data.datasets[0].data = [1, 5, 3, 0, 4,1,2,1,4,4, 1, 2, 3, 3, 2, 1, 4, 4, 1, 3];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
+            chartC.data.datasets[0].data = [1, 5, 3, 0, 4, 1, 2, 1, 4, 4, 1, 2, 3, 3, 2, 1, 4, 4, 1, 3];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE12(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -347,10 +360,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [3, 3, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [4, 8, 5, 3, 4, 2, 4, 8, 4, 7, 5, 3, 4, 7, 6, 2, 5, 9, 5, 3];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE13(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -363,10 +376,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [1, 1, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [5, 8, 7, 4, 7, 3, 4, 6, 4, 10, 4, 2, 4, 7, 3, 4, 4, 9, 7, 3];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE14(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -382,7 +395,7 @@ function mostrarMensaje() {
             chartC.data.labels = [];
             chartC.data.datasets[0].data = [];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE15(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -395,10 +408,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [3, 4, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
-            chartC.data.datasets[0].data = [4, 5, 6, 3, 5, 3, 2, 5 ,3, 6, 3, 4, 1, 5, 2, 1, 2, 6, 5, 5];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
+            chartC.data.datasets[0].data = [4, 5, 6, 3, 5, 3, 2, 5, 3, 6, 3, 4, 1, 5, 2, 1, 2, 6, 5, 5];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE16(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -411,10 +424,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [1, 1, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [5, 9, 7, 5, 7, 5, 2, 9, 8, 9, 3, 2, 2, 6, 3, 4, 2, 8, 8, 5];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE17(); // Llamada a la función para agregar datos específicos de IE-
             break;
 
@@ -427,10 +440,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [5, 6, 2];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [6, 8, 6, 6, 8, 4, 3, 9, 6, 8, 4, 4, 6, 7, 6, 3, 6, 9, 8, 6];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE18(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -443,10 +456,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE19(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -459,10 +472,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [4, 7, 4, 0, 7, 3, 6, 6, 4, 6, 2, 1, 0, 5, 2, 1, 2, 9, 2, 3];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE20(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -475,10 +488,10 @@ function mostrarMensaje() {
             chartB.data.datasets[0].data = [6, 6, 1];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [5, 11, 6, 5, 10, 4, 8, 8, 6, 11, 3, 6, 5, 11, 8, 6, 5, 10, 10, 5];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE21(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -494,7 +507,7 @@ function mostrarMensaje() {
             chartC.data.labels = [];
             chartC.data.datasets[0].data = [];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE22(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -506,11 +519,11 @@ function mostrarMensaje() {
             chartB.data.labels = ['P1', 'P2', 'P3'];
             chartB.data.datasets[0].data = [3, 3, 0];
             chartB.data.datasets[0].backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
-            
-            chartC.data.labels = ['P1','P2','P3','P4','P5','P6','P7','P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16','P17', 'P18','P19', 'P20'];
+
+            chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [3, 9, 5, 4, 5, 4, 2, 9, 7, 8, 1, 3, 4, 8, 6, 5, 3, 7, 7, 3];
             chartC.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
-            
+
             agregarDatosIE23(); // Llamada a la función para agregar datos específicos de IE-2
             break;
 
@@ -544,7 +557,7 @@ function agregarDatosIE1() {
     agregarDato('P13', 0, '#0cafb4');
     agregarDato('P14', 3, '#0d8cbc');
     agregarDato('P15', 1, '#0d8cbc');
-    
+
 
     agregarDatoB('P4', 5, '#ffff00');
     agregarDatoB('P5', 2, '#ff00ff');
@@ -563,7 +576,7 @@ function agregarDatosIE1() {
 
 // Función para agregar datos específicos de IE-2
 function agregarDatosIE2() {
-    
+
     agregarDatoB('P4', 3, '#ffff00');
     agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 1, '#00ffff');
@@ -593,9 +606,9 @@ function agregarDatosIE4() {
     agregarDato('P12', 4, '#0bb7ac');
     agregarDato('P13', 1, '#0cafb4');
     agregarDato('P14', 3, '#0d8cbc');
-    agregarDato('P15', 2, '#0d8cbc');   
+    agregarDato('P15', 2, '#0d8cbc');
 
-    
+
     agregarDatoB('P4', 8, '#ffff00');
     agregarDatoB('P5', 1, '#ff00ff');
     agregarDatoB('P6', 6, '#00ffff');
@@ -608,7 +621,7 @@ function agregarDatosIE4() {
     agregarDatoB('P13', 1, '#3300ff');
     agregarDatoB('P14', 2, '#ff0033');
     agregarDatoB('P15', 7, '#00ff33');
-    
+
 }
 
 function agregarDatosIE5() {
@@ -623,9 +636,9 @@ function agregarDatosIE5() {
     agregarDato('P12', 4, '#0bb7ac');
     agregarDato('P13', 1, '#0cafb4');
     agregarDato('P14', 7, '#0d8cbc');
-    agregarDato('P15', 5, '#0d8cbc');   
+    agregarDato('P15', 5, '#0d8cbc');
 
-    
+
     agregarDatoB('P4', 0, '#ffff00');
     agregarDatoB('P5', 2, '#ff00ff');
     agregarDatoB('P6', 3, '#00ffff');
@@ -655,7 +668,7 @@ function agregarDatosIE6() {
     agregarDatoB('P15', 6, '#0d8cbc');
 
 
-    
+
     agregarDato('P4', 0, '#ffff00');
     agregarDato('P5', 2, '#ff00ff');
     agregarDato('P6', 3, '#00ffff');
@@ -685,7 +698,7 @@ function agregarDatosIE7() {
     agregarDato('P15', 1, '#0d8cbc');
 
 
-    
+
     agregarDatoB('P4', 7, '#ffff00');
     agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 4, '#00ffff');
@@ -746,7 +759,7 @@ function agregarDatosIE9() {
     agregarDato('P15', 1, '#0d8cbc');
 
 
-    
+
     agregarDatoB('P4', 2, '#ffff00');
     agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 0, '#00ffff');
@@ -775,7 +788,7 @@ function agregarDatosIE11() {
     agregarDato('P15', 0, '#0d8cbc');
 
 
-    
+
     agregarDatoB('P4', 3, '#ffff00');
     agregarDatoB('P5', 2, '#ff00ff');
     agregarDatoB('P6', 1, '#00ffff');
@@ -791,7 +804,7 @@ function agregarDatosIE11() {
 }
 
 function agregarDatosIE12() {
-    
+
     agregarDatoB('P4', 0, '#ffff00');
     agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 1, '#00ffff');
@@ -806,7 +819,7 @@ function agregarDatosIE12() {
     agregarDatoB('P15', 0, '#00ff33');
 }
 function agregarDatosIE13() {
-    
+
     agregarDatoB('P4', 2, '#ffff00');
     agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 0, '#00ffff');
@@ -870,7 +883,7 @@ function agregarDatosIE16() {
 
 }
 function agregarDatosIE17() {
-    
+
     agregarDatoB('P4', 1, '#ffff00');
     agregarDatoB('P5', 0, '#ff00ff');
     agregarDatoB('P6', 0, '#00ffff');
@@ -974,7 +987,7 @@ function agregarDatosIE23() {
 }
 
 
-// Función para agregar datos al gráfico de pie
+// Función para agregar datos al gráfico de bar
 function agregarDato(label, valor, color) {
     chart.data.labels.push(label);
     chart.data.datasets[0].data.push(valor);
