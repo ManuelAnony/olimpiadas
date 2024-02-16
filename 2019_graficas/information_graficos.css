@@ -28,24 +28,72 @@ canvas {
     max-height: 482px;
 }
 .scroll{
-    overflow: scroll;
+    overflow: overlay;
     height:530px;
+}
+.InfoGrafAV{
+    margin:7px;
+    border-radius:12px;
+    border:1px solid #fff;
+}
+.InfoGrafAV h4{
+    margin-top:10px;
+    font-weight:600;
+    font-size:14px;
+}
+.InfoGrafAV canvas{
+    padding:0 10px 0 10px;
+}
+
+.InfoGrafAV-advanced{
+background-color: #C2F0C2;
+}
+.InfoGrafAV-intermedied{
+    background-color: #71D083;
+}
+.InfoGrafAV-basic{
+    background-color: #53B365;
+}
+
+
+//personalizacion en barra
+.scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    width: 3px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 3px;
+
+
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #2b2b2b;
 }
 
 .graficos{
-height:620px;
-margin:0;
-}
-
+    height:620px;
+    margin:0;
+    }
 .grafico-barras{
     margin:0;
     flex-direction:column;
     min-height:200px;
+    padding: 0px 20px 0 20px
    
 }
 .graficos-circulares{
+    padding:5px;
+    background-color:#ecffeb;
     width:300px;
-    margin:0 20px 100px 0;
+    height:107%;
+    margin:0px 0px 0px 0px;
+    border-top-left-radius: 12px; 
+    border-bottom-left-radius: 12px;
 }
 
 .grafos{
@@ -60,21 +108,30 @@ margin:0;
 .bar-fixed-information{
    
     //background-image: url('https://e1.pxfuel.com/desktop-wallpaper/856/222/desktop-wallpaper-1-numbers-numeric.jpg');
-   background-color:#2b2b2b;
-    background-size: cover;
+    background: linear-gradient(to right, white 0%, white 0%, #2b7118 35%, #0b1c0b 100%);
+    width:101%;
+    /* background-size: cover;
     content: "";
     overflow:hidden;
     filter: grayscale(100%);
     opacity: 1;
     z-index: 1000;
     align-items: center;
-    width:auto;
-    max-height:200px;
     
+    max-height:200px; */
+    
+}
+
+.bar-fixed-information .icon-udec {
+      
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .bar-fixed-information .icon-udec img{
     width:200px;
+    height:120px;
+   
 }
 
 
@@ -86,17 +143,20 @@ color:#fff;
 .redes-icon-buttton{
     width:15px;
 }
-.tittles-information{
+.bar-fixed-information .tittles-information{
     color:#fff;
     
 }
 
-.tittles-information h1{
+
+.bar-fixed-information .tittles-information h1{
     font-weight:700;
+  
 
 }
-.tittles-information h3{ 
+.bar-fixed-information .tittles-information h3{ 
     color:#fff;
+    font-size:11px;
     
 }
 
@@ -104,6 +164,69 @@ color:#fff;
     align-items:center;
 }
 
+
+.bar-fixed-information .informations .text-center{
+    margin:0;
+}
+.bar-fixed-information .informations h4{
+    font-size:18px;
+}
+.bar-fixed-information .informations h4{
+    font-size:18px;
+    font-weight:600;
+}
 .bar-fixed-information .col-selection-school p{
     color:#fff;
+    font-size:16px;
+    margin:0;
 }
+
+.bar-fixed-information .col-selection-school .center .menu-desplegable{
+    word-wrap: normal;
+    border-color: #fff;
+    color: #000;
+    font-size: 12px;
+    background-color: #ecffea;
+    border-radius: 7px;
+    padding: 3px;
+}
+//personalizacion en barra
+.bar-fixed-information .col-selection-school .center .menu-desplegable::-webkit-scrollbar {
+    width: 5px;
+}
+
+.bar-fixed-information .col-selection-school .center .menu-desplegable::-webkit-scrollbar-thumb {
+
+}
+
+.bar-fixed-information .col-selection-school .center .menu-desplegable::-webkit-scrollbar {
+    width: 3px;
+
+
+}
+
+.bar-fixed-information .col-selection-school .center .menu-desplegable::-webkit-scrollbar-thumb {
+    background-color: #2b2b2b;
+}
+
+.bar-fixed-information .informations .text-description{
+    font-size:12px;
+}
+
+.bar-fixed-information .informations .links-pages{
+    font-size:12px;
+}
+.bar-fixed-information .informations .links-pages img{
+    width:20px;
+    height:20px;
+    padding:0 5px 0 0;
+}
+
+.bar-fixed-information .informations .links-pages a{
+   text-decoration:none;
+}
+.bar-fixed-information .informations .col-icons .tittle-icons{
+    font-weight:600;
+    font-size:12px;
+}
+

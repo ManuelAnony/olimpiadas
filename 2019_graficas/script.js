@@ -17,21 +17,21 @@ const data = {
     datasets: [{
         label: '2019 - Basico',
         data: [71, 63, 0, 75, 72, 71, 77, 0, 55, 0, 60, 49, 54, 53, 0, 63, 55, 68, 50, 37, 65, 0, 57, 0, 61],
-        backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
-        borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
+        backgroundColor: '#C2F0C2', // Genera un color aleatorio para cada barra
+        // borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
         borderWidth: 1
     }, {
         label: '2019 - Intermedio',
         data: [52, 39, 0, 51, 51, 51, 44, 0, 48, 0, 43, 40, 38, 45, 0, 46, 40, 53, 0, 0, 54, 0, 58, 0, 47],
-        backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
-        borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
+        backgroundColor: '#71D083', // Genera un color aleatorio para cada barra
+        // borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
         borderWidth: 1
     },
     {
         label: '2019 - Avanzado',
         data: [41, 0, 0, 49, 57, 50, 45, 0, 40, 0, 60, 0, 0, 0, 0, 45, 0, 42, 0, 0, 42, 0, 47, 0, 47],
-        backgroundColor: generarColorAleatorio(), // Genera un color aleatorio para cada barra
-        borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
+        backgroundColor: '#53B365', // Genera un color aleatorio para cada barra
+        // borderColor: generarColorAleatorio(), // Genera un color aleatorio para el borde de cada barra
         borderWidth: 1
     },]
 };
@@ -76,7 +76,7 @@ const chart = new Chart(ctx, {
     data: {
         labels: ['Preguntas'],
         datasets: [{
-           label:'Num estudiantes que respondieron',
+            label: 'Num estudiantes que respondieron',
             data: [],
 
 
@@ -164,11 +164,20 @@ function mostrarMensaje() {
         case 'IE - 1':
             chart.data.labels = ['P1', 'P2', 'P3'];
             chart.data.datasets[0].data = [2, 4, 4];
-            chart.data.datasets[0].backgroundColor = ['#005954', '#01655c', '#027664'];
-
+            chart.data.datasets[0].backgroundColor = [
+                '#C2F0C2', '#B3E4B3', '#A4D9A4', '#95CE95', '#86C386',
+                '#76B876', '#67AD67', '#58A258', '#499749', '#3A8D3A',
+                '#2B822B', '#1C771C', '#0D6C0D', '#006100'
+            ];
+            
             chartB.data.labels = ['P1', 'P2', 'P3'];
             chartB.data.datasets[0].data = [6, 6, 0];
-            chartB.data.datasets[0].backgroundColor = ['#003400', '#004300', '#005100', '#006100', '#007000', '#008000'];
+            chartB.data.datasets[0].backgroundColor = [
+                '#00FF6A', '#00FF4A', '#00FF2A', '#00FF0A', '#00EA00',
+                '#00DD00', '#00D000', '#00C300', '#00B600', '#00A900',
+                '#009C00', '#008F00', '#008200', '#007500', '#006800',
+                '#005B00', '#004E00', '#004100', '#003400'
+            ];
 
             chartC.data.labels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12', 'P13', 'P14', 'P15', 'P16', 'P17', 'P18', 'P19', 'P20'];
             chartC.data.datasets[0].data = [5, 7, 6, 6, 6, 4, 4, 6, 6, 7, 3, 2, 5, 7, 2, 5, 3, 7, 5, 4];
