@@ -29,7 +29,9 @@ canvas {
 }
 .scroll{
     overflow: overlay;
-    height:530px;
+    height: 590px;
+    background-color:#ecffeb;
+    border-top-left-radius:12px;
 }
 .InfoGrafAV{
     margin:7px;
@@ -78,13 +80,59 @@ background-color: #C2F0C2;
 .graficos{
     height:620px;
     margin:0;
+    background-color:#ecffeb;
+
     }
 .grafico-barras{
     margin:0;
     flex-direction:column;
     min-height:200px;
-    padding: 0px 20px 0 20px
+    padding: 0;
+
+
+  
    
+}
+
+.grafico-barras h4{
+    margin-top: 50px;
+    padding: 30px 0 0 8px;
+    font-size: 24px;
+    color: #2b2b2b;
+    background-color: #ecffeb;
+    text-transform: uppercase;
+  
+}
+.grafico-barras-information{
+background-color:#fff;
+width:100%;
+border-radius:12px;
+}
+
+.grafico-barras-information img{
+   width:60px;
+   height:60px;
+    }
+
+.grafico-barras-information h3{
+    padding-top:8px;
+font-size:16px;
+font-weight:600;
+
+}
+.grafico-barras-information p{
+    padding-top:8px;
+font-size:12px;
+font-weight:600;
+color:#3c3c3c;
+
+}
+
+.grafico-barras-canvas{
+    background-color:#fff;
+   
+    border-bottom-right-radius:12px;
+    padding:8px;
 }
 .graficos-circulares{
     padding:5px;
@@ -96,6 +144,19 @@ background-color: #C2F0C2;
     border-bottom-left-radius: 12px;
 }
 
+.graficos-circulares .tittle{
+    padding-top:20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin:0;
+    padding:10px 0 10px 0;
+}
+
+.graficos-circulares  img{
+   width:50px;
+   height:50px;
+}
 .grafos{
     flex-direction:column; 
     overflow-y:auto;
@@ -124,7 +185,8 @@ background-color: #C2F0C2;
 
 .bar-fixed-information .icon-udec {
       
-    align-items: flex-start;
+   // align-items: flex-start;
+   align-items: center;
     flex-direction: column;
 }
 
@@ -177,7 +239,8 @@ color:#fff;
 }
 .bar-fixed-information .col-selection-school p{
     color:#fff;
-    font-size:16px;
+    font-size:14px;
+    font-weight:600;
     margin:0;
 }
 
@@ -213,6 +276,10 @@ color:#fff;
     font-size:12px;
 }
 
+ svg{
+    color:#fff;
+}
+
 .bar-fixed-information .informations .links-pages{
     font-size:12px;
 }
@@ -220,13 +287,20 @@ color:#fff;
     width:20px;
     height:20px;
     padding:0 5px 0 0;
+    
 }
 
 .bar-fixed-information .informations .links-pages a{
    text-decoration:none;
+   color:#fff;
 }
 .bar-fixed-information .informations .col-icons .tittle-icons{
     font-weight:600;
     font-size:12px;
+}
+
+
+.bar-fixed-information .informations .col-icons .redes{
+    flex-direction: row-reverse;
 }
 
