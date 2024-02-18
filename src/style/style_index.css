@@ -1057,8 +1057,11 @@ width:100px;
     }
 
     .section-pensamientos {
+       
         padding: 30px;
+        display: flex;
         text-align: center;
+        height: 600px;
         
     }
 
