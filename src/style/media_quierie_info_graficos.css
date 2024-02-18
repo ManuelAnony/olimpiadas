@@ -1,0 +1,53 @@
+@media screen and (max-width:450px){
+
+    .scroll {
+  
+        height: 590px;
+        
+    }
+    
+}
+
+@media screen and (max-width:390px){
+
+    .scroll {
+  
+        height: 620px;
+        
+    }
+    .bar-fixed-information {
+        
+        margin: 0 0px;
+    }
+    
+}
+
+
+@media screen and (max-width:450px){
+
+    .scroll {
+  
+        height: 520px;
+        
+    }
+    
+    .bar-fixed-information {
+        
+        margin: 0 0px;
+    }
+}
+
+@media screen and (max-width:331px){
+
+    .scroll {
+  
+        height: 300px;
+        
+    }
+    .bar-fixed-information {
+        
+        margin: 0 0px;
+    }
+    
+    
+}
