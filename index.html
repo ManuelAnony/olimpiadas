@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olimpiadas</title>
+    <title>Olimpiadas Matematicas</title>
+    <link rel="shortcut icon" href="/src/images/images-institution/icon-page.png" type="image/x-icon"
+        style="border-radius:'12px';">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- animate styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style_index.css">
+    <link rel="stylesheet" href="/src/style/style_index.css">
     <!-- Estas son librerias importadas para los diferentes estilos que se pueden llegar a dar en nuestro esqueleto-->
 </head>
 
@@ -25,26 +28,30 @@
             <!--<img class="logo-1" src="Logos UDEC - copia/escudos/ESCUDO-COLOR.png" alt="">-->
             <input type="checkbox" id="menu">
             <label for="menu">
-                <img src="images/menu.png" class="menu-icono" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16" style="color: aliceblue;">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
             </label>
             <nav class="navbar">
                 <img class="logo-2" src="/src/images/images-institution/ESCUDO-NEGRO-H.png" alt="">
 
                 <div class="menu-1">
                     <ul>
-                        <li><a href="#fondo">Resultados</a></li>
-                        <li><a href="#info-img">Informate más</a></li>
-                        <li><a href="#section-pensamientos">5 Pensamientos</a></li>
-                        <li><a href="#section-Documents">Pilares Legales y Normativos</a></li>
+                        <li><a href="#fondo" class="sections">Resultados</a></li>
+                        <li><a href="#info-img" class="sections">Informate más</a></li>
+                        <li><a href="#section-pensamientos" class="sections">5 Pensamientos</a></li>
+                        <li><a href="#section-Documents" class="sections">Pilares Legales y Normativos</a></li>
                     </ul>
                 </div>
-                <div class="menu-socials">
+                <div class="menu-socials d-flex">
                     <ul>
                         <!--<li><a href="fondo">Resultados</a></li>-->
                     </ul>
                     <div class="socials">
-                        <a href="https://www.facebook.com/FacultadIngenieriaUCundinamarca/">
-                            <div class="social">
+                        <a href="https://www.facebook.com/FacultadIngenieriaUCundinamarca/" class="icons-redes ">
+                            <div class="social social-fa">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-facebook" viewBox="0 0 16 16">
                                     <path
@@ -52,21 +59,37 @@
                                 </svg>
                             </div>
                         </a>
-                        <a href="https://x.com/UCundinamarca?t=QfXnMpPHXU1-GM8rHbjJjw&s=09">
-                            <div class="social">
+                        <a href="https://x.com/UCundinamarca?t=QfXnMpPHXU1-GM8rHbjJjw&s=09" class="icons-redes ">
+                            <div class="social social-tw">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    class="bi bi-twitter-x" viewBox="0 0 16 16">
                                     <path
-                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
                                 </svg>
                             </div>
                         </a>
-                        <a href="https://instagram.com/udecubate23?igshid=MzRlODBiNWFlZA==">
-                            <div class="social">
+                        <a href="https://instagram.com/udecubate23?igshid=MzRlODBiNWFlZA==" class="icons-redes ">
+                            <div class="social social-ins">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    class="bi bi-instagram" viewBox="0 0 16 16" ">
                                     <path
-                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        d=" M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0
+                                    0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0
+                                    8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923
+                                    1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8
+                                    16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0
+                                    1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16
+                                    10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0
+                                    0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172
+                                    0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166
+                                    1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047
+                                    1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0
+                                    1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5
+                                    2.5 0 0 1-.92-.598 2.5 2.5 0 0
+                                    1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24
+                                    1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0
+                                    0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0
+                                    1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                 </svg>
                             </div>
                         </a>
@@ -153,7 +176,8 @@
                         <div class="text-content-consulta-img">
                             <h4>Consulta los resultados de tu Institución Educativa #</h4>
 
-                            <a href="/src/src_graficas/2017_graficas/Information_Graficos.html" class="btn-2">Resultados</a>
+                            <a href="/src/src_graficas/2017_graficas/Information_Graficos.html"
+                                class="btn-2">Resultados</a>
                         </div>
 
 
@@ -167,7 +191,8 @@
                         <div class="text-content-consulta-img">
                             <h4>Consulta los resultados de tu Institución Educativa #</h4>
 
-                            <a href="/src/src_graficas/2018_graficas/Information_Graficos.html" class="btn-2">Resultados</a>
+                            <a href="/src/src_graficas/2018_graficas/Information_Graficos.html"
+                                class="btn-2">Resultados</a>
                         </div>
 
 
@@ -181,7 +206,8 @@
                             <div class="text-content-consulta-img">
                                 <h4>Consulta los resultados de tu Institución Educativa #</h4>
 
-                                <a href="/src/src_graficas/2019_graficas/Information_Graficos.html" class="btn-2">Resultados</a>
+                                <a href="/src/src_graficas/2019_graficas/Information_Graficos.html"
+                                    class="btn-2">Resultados</a>
                             </div>
 
 
@@ -241,132 +267,147 @@
 
 
 
-    <section class="section-pensamientos container">
-        <div class="tittle-pensamiento justify-content-center d-flex overlay col-6">
-            <h2>LOS 5 PENSAMIENTOS <br>MATEMATICOS</h2>
-        </div>
-        <div id="section-pensamientos  " class="buttons-information  p-4 d-flex">
-            <div class="col flex-column d-flex ">
-                <button id="bt-1" class="accordion btn-pensamiento col buttonSelect"
-                    onclick="mostrarElementos('bt-1',this);toggleContent(1)">
-                    <div class="d-flex pensamiento-nome"><span class="tittles-pensamientos">1.
-                            NUMÉRICO
-                        </span></div>
+    <section class="section-pensamientos  area p-0">
 
 
-                </button>
-                <div class="panel justify-content-evenly align-items-center" id="content1">
-                    <div class="col-5">
-                        <p class="text-pesamiento">
-                            La comprensión del uso y de los significados de los números y de la numeración; la
-                            comprensión
-                            del sentido y significado de las operaciones y de las relaciones entre números, y el
-                            desarrollo
-                            de diferentes técnicas de cálculo y estimación.
-                        </p>
-                    </div>
-                    <div> <span><img src="/src/icons/bloques-numericos.png" alt="" class="img-fluid"></span></div>
+        <ul class="circles">
 
-                </div>
+            <div class="tittle-pensamiento justify-content-center d-flex overlay col-6">
+                <h2>LOS 5 PENSAMIENTOS <br>MATEMATICOS</h2>
             </div>
+            <div id="section-pensamientos  " class="buttons-information  p-4 d-flex">
+                <div class="col flex-column d-flex ">
+                    <button id="bt-1" class="accordion btn-pensamiento col buttonSelect"
+                        onclick="mostrarElementos('bt-1',this);toggleContent(1)">
+                        <div class="d-flex pensamiento-nome"><span class="tittles-pensamientos">1.
+                                NUMÉRICO
+                            </span></div>
 
 
-            <div class="col flex-column d-flex ">
-                <button id="bt-2" class="accordion btn-pensamiento col buttonSelect"
-                    onclick="mostrarElementos('bt-2',this);toggleContent(2)">
-                    <div class="d-flex pensamiento-nome"> <span class="tittles-pensamientos">2.
-                            ESPACIAL
-                        </span></div>
-                </button>
-                <div class="panel justify-content-evenly align-items-center" id="content2">
-                    <div class="col-5">
-                        <p class="text-pesamiento">
-                            El conjunto de los procesos cognitivos mediante los cuales se construyen y se manipulan
-                            las
-                            representaciones mentales de los objetos del espacio, las relaciones entre ellos, sus
-                            transformaciones, y sus diversas traducciones o representaciones materiales.
-                        </p>
+                    </button>
+                    <div class="panel justify-content-evenly align-items-center" id="content1">
+                        <div class="col-5">
+                            <p class="text-pesamiento">
+                                La comprensión del uso y de los significados de los números y de la numeración; la
+                                comprensión
+                                del sentido y significado de las operaciones y de las relaciones entre números, y el
+                                desarrollo
+                                de diferentes técnicas de cálculo y estimación.
+                            </p>
+                        </div>
+                        <div> <span><img src="/src/icons/bloques-numericos.png" alt="" class="img-fluid"></span></div>
+
                     </div>
-
-                    <div><span><img src="/src/icons/espacial.png" alt="" class="img-fluid"></span></div>
                 </div>
-            </div>
 
-            <div class="col flex-column justify-content-center d-flex">
-                <button id="bt-3" class="accordion btn-pensamiento col buttonSelect"
-                    onclick="mostrarElementos('bt-3',this);toggleContent(3)">
-                    <div class="d-flex pensamiento-nome"> <span class="tittles-pensamientos">3.
-                            METRICO O
-                            MEDIDA</span></div>
-                </button>
-                <div class="panel justify-content-evenly align-items-center" id="content3">
 
-                    <div class="col-5">
-                        <p class="text-pesamiento">
-                            La comprensión general que tiene una persona sobre las magnitudes y las cantidades, su
-                            medición
-                            y el uso flexible de los sistemas métricos o de medidas en diferentes situaciones.
-                        </p>
+                <div class="col flex-column d-flex ">
+                    <button id="bt-2" class="accordion btn-pensamiento col buttonSelect"
+                        onclick="mostrarElementos('bt-2',this);toggleContent(2)">
+                        <div class="d-flex pensamiento-nome"> <span class="tittles-pensamientos">2.
+                                ESPACIAL
+                            </span></div>
+                    </button>
+                    <div class="panel justify-content-evenly align-items-center" id="content2">
+                        <div class="col-5">
+                            <p class="text-pesamiento">
+                                El conjunto de los procesos cognitivos mediante los cuales se construyen y se manipulan
+                                las
+                                representaciones mentales de los objetos del espacio, las relaciones entre ellos, sus
+                                transformaciones, y sus diversas traducciones o representaciones materiales.
+                            </p>
+                        </div>
+
+                        <div><span><img src="/src/icons/espacial.png" alt="" class="img-fluid"></span></div>
                     </div>
-
-                    <div><span><img src="/src/icons/medida.png" alt="" class="img-fluid"></span></div>
                 </div>
-            </div>
 
+                <div class="col flex-column justify-content-center d-flex">
+                    <button id="bt-3" class="accordion btn-pensamiento col buttonSelect"
+                        onclick="mostrarElementos('bt-3',this);toggleContent(3)">
+                        <div class="d-flex pensamiento-nome"> <span class="tittles-pensamientos">3.
+                                METRICO O
+                                MEDIDA</span></div>
+                    </button>
+                    <div class="panel justify-content-evenly align-items-center" id="content3">
 
+                        <div class="col-5">
+                            <p class="text-pesamiento">
+                                La comprensión general que tiene una persona sobre las magnitudes y las cantidades, su
+                                medición
+                                y el uso flexible de los sistemas métricos o de medidas en diferentes situaciones.
+                            </p>
+                        </div>
 
-            <div class="col flex-column justify-content-center d-flex">
-                <button id="bt-4" class="accordion btn-pensamiento col buttonSelect"
-                    onclick="mostrarElementos('bt-4',this);toggleContent(4)">
-                    <div class="d-flex pensamiento-nome"><span class="tittles-pensamientos">4.
-                            PROBABILISTICO
-                        </span></div>
-                </button>
-                <div class="panel justify-content-evenly align-items-center" id="content4">
-
-                    <div class="col-5">
-                        <p class="white-text text-pesamiento">
-                            La toma de decisiones en situaciones de incertidumbre, de azar, de riesgo o de
-                            ambigüedad
-                            por
-                            falta de información confiable, en las que no es posible predecir con seguridad lo que
-                            va a
-                            pasar. El pensamiento aleatorio se apoya directamente en conceptos y procedimientos de
-                            la
-                            teoría
-                            de probabilidades y de la estadística inferencial, e indirectamente en la estadística
-                            descriptiva y en la combinatoria.
-                        </p>
+                        <div><span><img src="/src/icons/medida.png" alt="" class="img-fluid"></span></div>
                     </div>
-                    <div><span><img src="/src/icons/probabilidad.png" alt="" class="img-fluid"></span></div>
                 </div>
-            </div>
 
 
-            <div class="col flex-column justify-content-center d-flex">
-                <button id="bt-5" class="accordion btn-pensamiento col buttonSelect"
-                    onclick="mostrarElementos('bt-5',this);toggleContent(5)">
-                    <div class="d-flex pensamiento-nome"><span class="tittles-pensamientos">5.
-                            VARIACIONAL</span></div>
-                </button>
-                <div class="panel justify-content-evenly align-items-center" id="content5">
 
-                    <div class="col-5">
-                        <p class="white-text text-pesamiento">
-                            El reconocimiento, la percepción, la identificación y la caracterización de la variación
-                            y
-                            el
-                            cambio en diferentes contextos, así como con su descripción, modelación y representación
-                            en
-                            distintos sistemas o registros simbólicos, ya sean verbales, icónicos, gráficos o
-                            algebraicos.
-                        </p>
+                <div class="col flex-column justify-content-center d-flex">
+                    <button id="bt-4" class="accordion btn-pensamiento col buttonSelect"
+                        onclick="mostrarElementos('bt-4',this);toggleContent(4)">
+                        <div class="d-flex pensamiento-nome"><span class="tittles-pensamientos">4.
+                                PROBABILISTICO
+                            </span></div>
+                    </button>
+                    <div class="panel justify-content-evenly align-items-center" id="content4">
+
+                        <div class="col-5">
+                            <p class="white-text text-pesamiento">
+                                La toma de decisiones en situaciones de incertidumbre, de azar, de riesgo o de
+                                ambigüedad
+                                por
+                                falta de información confiable, en las que no es posible predecir con seguridad lo que
+                                va a
+                                pasar. El pensamiento aleatorio se apoya directamente en conceptos y procedimientos de
+                                la
+                                teoría
+                                de probabilidades y de la estadística inferencial, e indirectamente en la estadística
+                                descriptiva y en la combinatoria.
+                            </p>
+                        </div>
+                        <div><span><img src="/src/icons/probabilidad.png" alt="" class="img-fluid"></span></div>
                     </div>
-                    <div><span><img src="/src/icons/variacion.png" alt="" class="img-fluid"></span></div>
                 </div>
-            </div>
 
-        </div>
+
+                <div class="col flex-column justify-content-center d-flex">
+                    <button id="bt-5" class="accordion btn-pensamiento col buttonSelect"
+                        onclick="mostrarElementos('bt-5',this);toggleContent(5)">
+                        <div class="d-flex pensamiento-nome"><span class="tittles-pensamientos">5.
+                                VARIACIONAL</span></div>
+                    </button>
+                    <div class="panel justify-content-evenly align-items-center" id="content5">
+
+                        <div class="col-5">
+                            <p class="white-text text-pesamiento">
+                                El reconocimiento, la percepción, la identificación y la caracterización de la variación
+                                y
+                                el
+                                cambio en diferentes contextos, así como con su descripción, modelación y representación
+                                en
+                                distintos sistemas o registros simbólicos, ya sean verbales, icónicos, gráficos o
+                                algebraicos.
+                            </p>
+                        </div>
+                        <div><span><img src="/src/icons/variacion.png" alt="" class="img-fluid"></span></div>
+                    </div>
+                </div>
+
+            </div>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </section>
 
 
@@ -454,11 +495,11 @@
                 </a>
 
             </div>
-            <div class="document-columm">
-                <a href="/src/documents//LineamientosCurriculares1998.pdf">
-                    <h4 class="text">Lineamientos curriculares</h1>
-                        <span><img src="/src/icons/lineamientos-icon.png" alt=""></span>
-                </a>
+            <div class=" document-columm">
+                            <a href="/src/documents//LineamientosCurriculares1998.pdf">
+                                <h4 class="text">Lineamientos curriculares</h1>
+                                    <span><img src="/src/icons/lineamientos-icon.png" alt=""></span>
+                            </a>
 
             </div>
             <div class="document-columm">
@@ -486,20 +527,32 @@
 
 
         <div class="">
-            <div class="socials d-flex">
-                <a href="https://www.facebook.com/FacultadIngenieriaUCundinamarca/">
-                    <div class="social">
-                        <img src="images/s1.svg" alt="">
+            <div class="socials">
+                <a href="https://www.facebook.com/FacultadIngenieriaUCundinamarca/" class="icons-redes ">
+                    <div class="social social-fa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-facebook" viewBox="0 0 16 16" style="color: aliceblue;">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
                     </div>
                 </a>
-                <a href="https://x.com/UCundinamarca?t=QfXnMpPHXU1-GM8rHbjJjw&s=09">
-                    <div class="social">
-                        <img src="images/s2.svg" alt="">
+                <a href="https://x.com/UCundinamarca?t=QfXnMpPHXU1-GM8rHbjJjw&s=09" class="icons-redes ">
+                    <div class="social social-tw">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-twitter-x" viewBox="0 0 16 16" style="color: aliceblue;">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
                     </div>
                 </a>
-                <a href="https://instagram.com/udecubate23?igshid=MzRlODBiNWFlZA==">
-                    <div class="social">
-                        <img src="images/s3.svg" alt="">
+                <a href="https://instagram.com/udecubate23?igshid=MzRlODBiNWFlZA==" class="icons-redes ">
+                    <div class="social social-ins">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-instagram" viewBox="0 0 16 16" style="color: aliceblue;">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg>
                     </div>
                 </a>
             </div>
