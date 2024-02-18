@@ -587,7 +587,7 @@ background-color:#0d0d0d;
     90% { transform: translate(0px, 0px); }
     100% { transform: translate(0, 0); }
   }
-.img-fluid{
+.img-fluid-pensamientos{
     animation: shake 2s infinite;
 }
  
