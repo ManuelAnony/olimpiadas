@@ -1,17 +1,20 @@
-
-
-//celulares
-
-@media screen and (min-width:360px){
-
+/* Celulares */
+@media screen and (min-width: 280px) {
     .scroll {
-  
-        height: 305px;
-        
+        height: 300px;
     }
     
     .bar-fixed-information {
-        
+        margin: 0 0px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .scroll {
+        height: 305px;
+    }
+    
+    .bar-fixed-information {
         margin: 0 0px;
     }
 }
@@ -26,83 +29,29 @@
     }
 }
 
-@media screen and (min-width:375px){
-
+@media screen and (min-width: 375px) {
     .scroll {
-  
         height: 350px;
-        
     }
     
     .bar-fixed-information {
-        
         margin: 0 0px;
     }
 }
-@media screen and (min-width:390px){
 
+@media screen and (min-width: 390px) {
     .scroll {
-  
         height: 560px;
-        
     }
     
     .bar-fixed-information {
-        
         margin: 0 0px;
     }
 }
 
-
-
-
-@media screen and (min-width:430px){
-
+@media screen and (min-width: 412px) {
     .scroll {
-  
-        height: 1121px;
-        
-    }
-    
-    .bar-fixed-information {
-        
-        margin: 0 0px;
-    }
-}
-
-@media screen and (min-width:280px){
-
-    .scroll {
-  
-        height: 300px;
-        
-    }
-    
-    .bar-fixed-information {
-        
-        margin: 0 0px;
-    }
-}
-
-@media screen and (min-width:412px){
-
-    .scroll {
-  
         height: 630px;
-        
-    }
-    
-    .bar-fixed-information {
-        
-        margin: 0 0px;
-    }
-}
-
-//tablets
-
-@media screen and (min-width: 1024px) {
-    .scroll {
-        height: 810px;
     }
     
     .bar-fixed-information {
@@ -110,21 +59,27 @@
     }
 }
 
-
-@media screen and (min-width:540px){
-
+@media screen and (min-width: 430px){
+.scroll {
+    height: 489px;
+}
+}
+/* Tablets */
+@media screen and (min-width: 540px) {
     .scroll {
-  
         height: 420px;
-        
     }
     
     .bar-fixed-information {
-        
         margin: 0 0px;
     }
 }
 
+@media screen and (min-width: 1024px){
+.scroll {
+    height: 410px;
+}
+}
 @media (min-width: 1280px) and (min-height: 800px) {
     .scroll {
         height: 600px;
@@ -135,4 +90,39 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    .scroll {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .scroll {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .scroll {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .scroll {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .scroll {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .scroll {
+        height: 550px;
+    }
+}
 
